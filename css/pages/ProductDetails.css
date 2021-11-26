@@ -1,0 +1,17 @@
+.StatsMetrics {
+    margin-bottom: 20px;
+}
+
+.Collpase .SimpleText p:last-child {
+    margin-bottom: 0;
+}
+
+.RiskIndicator {
+    margin-top: 40px;
+}
+
+@media (max-width: 992px) {
+    .SideContent > section > .SimpleText p:last-child {
+        margin-bottom: 10px;
+    }
+}

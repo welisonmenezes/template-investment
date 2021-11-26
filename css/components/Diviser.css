@@ -1,0 +1,40 @@
+.Diviser,
+.Diviser > li {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.Diviser > li::after {
+    content: "/";
+    display: block;
+    width: 10px;
+    margin: 0 15px;
+    color: var(--clrPortfolioLabel);
+    font-size: 16px;
+    text-align: center;
+}
+
+.Diviser > li:last-child::after {
+    display: none;
+}
+
+.Diviser.small > li::after {
+    margin: 0 5px;
+}
+
+@media (max-width: 768px) {
+    .Diviser > li::after {
+        margin: 0 10px;
+    }
+}
+
+
+
+/*********************************
+* LIGHT MODE
+*********************************/
+
+.light-mode .Diviser > li::after {
+    color: var(--lm_clrText);
+}

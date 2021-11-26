@@ -1,0 +1,101 @@
+.MainMenuBG {
+    background-color: black;
+    opacity: 0.3;
+    position: fixed;
+    z-index: 9998;
+    width: 100%;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    display: none;
+}
+.MainMenuBG.open-menu {
+    display: block;
+}
+
+.MainMenu {
+    height: 100vh;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    right: -100%;
+    width: 40%;
+    max-width: 600px;
+    min-width: 460px;
+    background-color: var(--clrBG);
+    overflow: hidden;
+
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.MainMenu.open-menu {
+    right: 0;
+}
+
+.MainMenu > div {
+    position: relative;
+}
+
+.MainMenu .menu-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+    margin-bottom: 60px;
+}
+
+.MainMenu .menu-header .Diviser {
+    margin-top: 5px;
+}
+
+.MainMenu .menu-body .UserBox {
+    margin-bottom: 40px;
+}
+
+@media (max-width: 1430px) {
+    .MainMenu {
+        width: 50%;
+    }
+}
+
+@media (max-width: 1150px) {
+    .MainMenu {
+        width: 60%;
+    }
+}
+
+@media (max-width: 950px) {
+    .MainMenu {
+        width: 70%;
+    }
+}
+
+@media (max-width: 768px) {
+    .MainMenu {
+        width: 100%;
+        min-width: auto;
+        padding-right: 0;
+    }
+
+    .MainMenu .menu-header {
+        margin-bottom: 10px;
+        padding: 20px 20px;
+    }
+
+    .MainMenu .menu-body .UserBox {
+        margin-bottom: 20px;
+    }
+}
+
+
+/*********************************
+* LIGHT MODE
+*********************************/
+
+.light-mode .MainMenu {
+    background-color: var(--lm_clrBG);
+}

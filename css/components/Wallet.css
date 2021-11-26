@@ -1,0 +1,61 @@
+.Wallet {
+    display: inline-block;
+    color: var(--clrText);
+    font-size: 22px;
+    line-height: 24px;
+    font-weight: 500;
+}
+
+.Wallet h6 {
+   font-weight: 500;
+   color: var(--clrDisabledText);
+   font-size: 14px;
+   line-height: 16px;
+   white-space: nowrap;
+   margin-bottom: 3px;
+}
+
+.Wallet p {
+    white-space: nowrap;
+}
+
+.Wallet.with-control {
+    position: relative;
+    padding-right: 30px;
+}
+
+.Wallet.with-control .Button {
+    position: absolute;
+    right: 0;
+    bottom: 2px;
+    z-index: 2;
+}
+
+@media (max-width: 768px) {
+    .Wallet {
+        font-size: 20px;
+        line-height: 22px;
+    }
+
+    .Wallet h6 {
+        font-size: 12px;
+        line-height: 14px;
+    }
+
+    .Wallet.with-control {
+        padding-right: 25px;
+    }
+}
+
+
+/*********************************
+* LIGHT MODE
+*********************************/
+
+.light-mode .Wallet {
+    color: var(--lm_clrStrong);
+}
+
+.light-mode .Wallet h6 {
+    color: var(--lm_clrText);
+}

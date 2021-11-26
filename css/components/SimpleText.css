@@ -1,0 +1,39 @@
+.SimpleText {
+    color: var(--clrText);
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.SimpleText h2 {
+    margin-bottom: 30px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.SimpleText p {
+    margin-bottom: 30px;
+    line-height: 26px;
+}
+
+@media (max-width: 768px) {
+    .SimpleText {
+        font-size: 14px;
+    }
+
+    .SimpleText h2 {
+        font-size: 14px;
+    }
+}
+
+
+/*********************************
+* LIGHT MODE
+*********************************/
+
+.light-mode .SimpleText {
+    color: var(--lm_clrStrong);
+}
+
+.light-mode .SimpleText h2 {
+    color: var(--lm_clrStrong);
+}

@@ -1,0 +1,86 @@
+.Chart .apexcharts-tooltip {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.Chart .apexcharts-xaxistooltip-bottom:before {
+    border-bottom-color: var(--clrText) !important;
+}
+
+.Chart .apexcharts-xaxistooltip {
+    background-color: var(--clrText) !important;
+    border-color: var(--clrText) !important;
+}
+
+.Chart.small {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px !important;
+    min-height: 30px !important;
+    width: 50px;
+    overflow: hidden;
+}
+.Chart.small > div {
+    position: relative;
+    top: -8px;
+}
+
+.Chart.micro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px !important;
+    min-height: 30px !important;
+    width: 40px;
+    overflow: hidden;
+}
+.Chart.micro > div {
+    position: relative;
+    top: -5px;
+}
+
+
+
+
+
+/*********************************
+* LIGHT MODE
+*********************************/
+
+.light-mode .Chart .apexcharts-series path {
+    stroke: var(--lm_clrSecondary) !important;
+}
+
+.light-mode .Chart.down .apexcharts-series path {
+    stroke: var(--lm_clrDown) !important;
+}
+
+.light-mode .Chart .apexcharts-tooltip {
+    color: var(--lm_clrStrong) !important;
+}
+
+.light-mode .Chart .apexcharts-tooltip-marker {
+    background-color: var(--lm_clrSecondary) !important;
+}
+
+.light-mode .Chart.down .apexcharts-tooltip-marker {
+    background-color: var(--lm_clrDown) !important;
+}
+
+.light-mode .Chart .apexcharts-series-markers circle {
+    fill: var(--lm_clrSecondary) !important;
+}
+
+.light-mode .Chart.down .apexcharts-series-markers circle {
+    fill: var(--lm_clrDown) !important;
+}
+
+.light-mode .Chart .apexcharts-xaxistooltip-bottom:before {
+    border-bottom-color: var(--lm_clrBGHover) !important;
+}
+
+.light-mode .Chart .apexcharts-xaxistooltip {
+    background-color: var(--lm_clrBGHover) !important;
+}

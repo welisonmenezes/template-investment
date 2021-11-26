@@ -1,0 +1,13 @@
+.MainLayout {
+    min-height: calc(100vh - 20px);
+    background-color: var(--clrBG);
+}
+
+
+/*********************************
+* LIGHT MODE
+*********************************/
+
+.light-mode .MainLayout {
+    background-color: var(--lm_clrBG);
+}

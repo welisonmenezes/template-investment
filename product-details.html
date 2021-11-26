@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title>Transfero Prime</title>
+    <link href="img/favicon.png" rel="apple-touch-icon" sizes="144x144">
+    <link href="img/favicon.png" rel="apple-touch-icon" sizes="120x120">
+    <link href="img/favicon.png" rel="apple-touch-icon" sizes="76x76">
+    <link href="img/favicon.png" rel="shortcut icon">
+    <link href="img/favicon.png" rel="icon">
+    <link rel="stylesheet" href="css/Styles.css">
+    <link rel="stylesheet" href="css/pages/ProductDetails.css">
+</head>
+<body>
+    <div id="app">
+        <div class="MainLayout">
+            <div class="ContainerBorder top"></div>
+            <div class="ContainerBorder bottom"></div>
+
+            <header class="MainHeader">
+                <div>
+                    <div class="container">
+                        <div class="col col-1">
+                            <a href="#" class="Logo"></a>
+                        </div>
+                        <div class="col col-2 hide-992">
+                            <div class="Wallet">
+                                <h6>Valor da sua Carteira</h6>
+                                <p>R$ 5.139.239.160,94</p>
+                            </div>
+                            <ul class="Diviser">
+                                <li>
+                                    <a href="#" class="Button icon-button add">Aporte</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="Button icon-button get">Resgate</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col col-3">
+                            <ul class="Diviser">
+                                <li class="hide-992">
+                                    <ul class="Diviser small">
+                                        <li>
+                                            <button type="button" class="Button moon" onclick="SetDarkOrLightMode(true)"></button>
+                                        </li>
+                                        <li>
+                                            <button type="button" class="Button sun off" onclick="SetDarkOrLightMode(false)"></button>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#" class="Button dash"></a>
+                                </li>
+                                <li>
+                                    <button type="button" class="Button menu" onclick="OpenMainMenu()"></button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <aside class="MainMenu">
+                <div>
+                    <div class="menu-header">
+                        <button type="button" class="Button close" onclick="CloseMainMenu()"></button>
+                        <ul class="Diviser small">
+                            <li>
+                                <button type="button" class="Button moon" onclick="SetDarkOrLightMode(true)"></button>
+                            </li>
+                            <li>
+                                <button type="button" class="Button sun off" onclick="SetDarkOrLightMode(false)"></button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="menu-body">
+                        <div class="UserBox">
+                            <span class="name">Welison Menezes</span>
+                            <a href="#">Meus Dados</a>
+                        </div>
+                        <ul class="Menu">
+                            <li>
+                                <a href="#">
+                                    <span>Alterar Senha</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>Autenticação de 2 Fatores</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>FAQ</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>Suporte</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>Logout</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </aside>
+            <div class="MainMenuBG" onclick="CloseMainMenu()"></div>
+
+            <aside class="MainAside">
+                <div>
+                    <div class="container">
+                        <div class="col-1">
+                            <div class="BalanceInfo">
+                                <div class="PortfolioLabel cyc">
+                                    <div>CCY</div>
+                                </div>
+                                <div class="Wallet with-control">
+                                    <h6>C. Cyclical</h6>
+                                    <p>R$ 5.160.940,13</p>
+                                    <button type="button" class="Button eye"></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <a href="#" class="Button default active">Quero Investir</a>
+                            <div class="QuotationInfo">
+                                <div class="Quotation up">
+                                    3,25%
+                                </div>
+                                <div class="col-2">
+                                    <div class="Chart chart-demo-quotation small"></div>
+                                    <small>12/01/2022</small>
+                                </div>
+                                <button type="button" class="Button more-less more" onclick="ToggleCollapseChart(event)"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <main class="MainContent">
+                <div>
+
+                    <div class="CollapseChart">
+                        <div class="Chart chart-demo-1"></div>
+                    </div>
+
+                    <div class="SideContent">
+                        <nav>
+                            <div>
+                                <ul class="SideMenu">
+                                    <li class="active">
+                                        <a href="#" onclick="GoToNavigation(event, '#demo-collapse-1')">Risk and Reward Profile</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" onclick="GoToNavigation(event, '#demo-collapse-2')">Suitability</a>
+                                    </li>
+                                    <li class="active">
+                                        <a href="#" onclick="GoToNavigation(event, '#demo-collapse-3')">Investment Facts</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" onclick="GoToNavigation(event, '#demo-collapse-4')">Stats Metrics</a>
+                                    </li>
+                                    <li class="active">
+                                        <a href="#" onclick="GoToNavigation(event, '#demo-collapse-5')">Year Return</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                        
+                        <section>
+                            <div class="SimpleText">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, cum modi facere aut delectus dignissimos eligendi ipsa at nam quia architecto ex nulla quasi, saepe illo, consectetur quae quos numquam.</p>
+                            </div>
+
+                            <div class="Collpase" id="demo-collapse-1">
+                                <div class="Collapse-header">
+                                    <h2>Risk and Reward Profile</h2>
+                                    <button type="button" class="Button more-less more" onclick="OnOpenCollapsed('#demo-collapse-1')"></button>
+                                </div>
+                                <div class="Collapse-body">
+                                    <div class="SimpleText">
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, cum modi facere aut delectus dignissimos eligendi ipsa at nam quia architecto ex nulla quasi, saepe illo, consectetur quae quos numquam.</p>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, cum modi facere aut delectus dignissimos eligendi ipsa at nam quia architecto ex nulla quasi, saepe illo, consectetur quae quos numquam.</p>
+                                    </div>
+                                    <div class="RiskIndicator three">
+                                        <div class="indicator">
+                                            <div></div>
+                                        </div>
+                                        <div class="numbers">
+                                            <span class="one">01</span>
+                                            <span class="two">02</span>
+                                            <span class="three">03</span>
+                                            <span class="four">04</span>
+                                            <span class="five">05</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="Collpase" id="demo-collapse-2">
+                                <div class="Collapse-header">
+                                    <h2>Suitability</h2>
+                                    <button type="button" class="Button more-less more" onclick="OnOpenCollapsed('#demo-collapse-2')"></button>
+                                </div>
+                                <div class="Collapse-body">
+                                    <div class="SimpleText">
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, cum modi facere aut delectus dignissimos eligendi ipsa at nam quia architecto ex nulla quasi, saepe illo, consectetur quae quos numquam.</p>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, cum modi facere aut delectus dignissimos eligendi ipsa at nam quia architecto ex nulla quasi, saepe illo, consectetur quae quos numquam.</p>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, cum modi facere aut delectus dignissimos eligendi ipsa at nam quia architecto ex nulla quasi, saepe illo, consectetur quae quos numquam.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="Collpase" id="demo-collapse-3">
+                                <div class="Collapse-header">
+                                    <h2>Investment Facts</h2>
+                                    <button type="button" class="Button more-less more" onclick="OnOpenCollapsed('#demo-collapse-3')"></button>
+                                </div>
+                                <div class="Collapse-body">
+                                    <div class="ListCol">
+                                        <ul>
+                                            <li>
+                                                <h4>ASSET CLASS</h4>
+                                                <div>
+                                                    <span>Digital Assests</span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <h4>ASSET CLASS</h4>
+                                                <div>
+                                                    <span>Digital Assests</span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <h4>ASSET CLASS</h4>
+                                                <div>
+                                                    <span>Digital Assests</span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <h4>ASSET CLASS</h4>
+                                                <div>
+                                                    <span>Digital Assests</span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <h4>ASSET CLASS</h4>
+                                                <div>
+                                                    <span>Digital Assests</span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <h4>ASSET CLASS</h4>
+                                                <div>
+                                                    <span>Digital Assests</span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <h4>ASSET CLASS</h4>
+                                                <div>
+                                                    <span>Digital Assests</span>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <div class="info">*Info text here</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="Collpase" id="demo-collapse-4">
+                                <div class="Collapse-header">
+                                    <h2>Stats Metrics</h2>
+                                    <button type="button" class="Button more-less more" onclick="OnOpenCollapsed('#demo-collapse-4')"></button>
+                                </div>
+                                <div class="Collapse-body">
+                                    <div class="StatsMetrics">
+                                        <div class="row">
+                                            <div class="col-1">
+                                                <div class="StatsMetricsItem">
+                                                    <div class="header">
+                                                        <span>Counter Cyclical</span>
+                                                    </div>
+                                                </div>
+                                                <div class="StatsMetricsItem">
+                                                    <div class="item">
+                                                        <span>Avarage monthly return</span>
+                                                        <span>29,90%</span>
+                                                    </div>
+                                                </div>
+                                                <div class="StatsMetricsItem">
+                                                    <div class="item">
+                                                        <span>Avarage monthly return</span>
+                                                        <span>29,90%</span>
+                                                    </div>
+                                                </div>
+                                                <div class="StatsMetricsItem">
+                                                    <div class="item">
+                                                        <span>Avarage monthly return</span>
+                                                        <span>29,90%</span>
+                                                    </div>
+                                                </div>
+                                                <div class="StatsMetricsItem">
+                                                    <div class="item">
+                                                        <span>Avarage monthly return</span>
+                                                        <span>29,90%</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-2">
+                                                <div class="StatsMetricsItem">
+                                                    <div class="header">
+                                                        <span>Counter Cyclical</span>
+                                                    </div>
+                                                </div>
+                                                <div class="StatsMetricsItem">
+                                                    <div class="item">
+                                                        <span>Avarage monthly return</span>
+                                                        <span>29,90%</span>
+                                                    </div>
+                                                </div>
+                                                <div class="StatsMetricsItem">
+                                                    <div class="item">
+                                                        <span>Avarage monthly return</span>
+                                                        <span>29,90%</span>
+                                                    </div>
+                                                </div>
+                                                <div class="StatsMetricsItem">
+                                                    <div class="item">
+                                                        <span>Avarage monthly return</span>
+                                                        <span>29,90%</span>
+                                                    </div>
+                                                </div>
+                                                <div class="StatsMetricsItem">
+                                                    <div class="item">
+                                                        <span>Avarage monthly return</span>
+                                                        <span>29,90%</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="info">*Info text here</div>
+                                    </div>
+
+                                    <div class="Table has-head-col">
+                                        <div class="head-col">
+                                            <table>
+                                                <tr>
+                                                    <th>&nbsp;</th>
+                                                </tr>
+                                                <tr>
+                                                    <td>2021</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2020</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2019</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2018</td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <div class="main-table">
+                                            <div class="OverlayScrollbars overlay-scrollbars-table-demo">
+                                                <table>
+                                                    <tr>
+                                                        <th>Jan</th>
+                                                        <th>Fev</th>
+                                                        <th>Mar</th>
+                                                        <th>Abr</th>
+                                                        <th>Mai</th>
+                                                        <th>Jun</th>
+                                                        <th>Jul</th>
+                                                        <th>Ago</th>
+                                                        <th>Set</th>
+                                                        <th>Out</th>
+                                                        <th>Nov</th>
+                                                        <th>Dez</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>23,55%</td>
+                                                        <td>23,55%</td>
+                                                        <td>23,55%</td>
+                                                        <td>23,55%</td>
+                                                        <td>23,55%</td>
+                                                        <td>23,55%</td>
+                                                        <td>23,55%</td>
+                                                        <td>23,55%</td>
+                                                        <td>23,55%</td>
+                                                        <td>23,55%</td>
+                                                        <td>23,55%</td>
+                                                        <td>23,55%</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>23,55%</td>
+                                                        <td>23,55%</td>
+                                                        <td>23,55%</td>
+                                                        <td>23,55%</td>
+                                                        <td>23,55%</td>
+                                                        <td>23,55%</td>
+                                                        <td>23,55%</td>
+                                                        <td>23,55%</td>
+                                                        <td>23,55%</td>
+                                                        <td>23,55%</td>
+                                                        <td>23,55%</td>
+                                                        <td>23,55%</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>23,55%</td>
+                                                        <td>23,55%</td>
+                                                        <td>23,55%</td>
+                                                        <td>23,55%</td>
+                                                        <td>23,55%</td>
+                                                        <td>23,55%</td>
+                                                        <td>23,55%</td>
+                                                        <td>23,55%</td>
+                                                        <td>23,55%</td>
+                                                        <td>23,55%</td>
+                                                        <td>23,55%</td>
+                                                        <td>23,55%</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>23,55%</td>
+                                                        <td>23,55%</td>
+                                                        <td>23,55%</td>
+                                                        <td>23,55%</td>
+                                                        <td>23,55%</td>
+                                                        <td>23,55%</td>
+                                                        <td>23,55%</td>
+                                                        <td>23,55%</td>
+                                                        <td>23,55%</td>
+                                                        <td>23,55%</td>
+                                                        <td>23,55%</td>
+                                                        <td>23,55%</td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="Collpase" id="demo-collapse-5">
+                                <div class="Collapse-header">
+                                    <h2>Year Return</h2>
+                                    <button type="button" class="Button more-less more" onclick="OnOpenCollapsed('#demo-collapse-5')"></button>
+                                </div>
+                                <div class="Collapse-body">
+                                    <div class="ListCol">
+                                        <ul>
+                                            <li>
+                                                <h4>2021</h4>
+                                                <div>
+                                                    <span>REAL</span>
+                                                    <span class="value">75,44%</span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <h4>2021</h4>
+                                                <div>
+                                                    <span>REAL</span>
+                                                    <span class="value">75,44%</span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <h4>2021</h4>
+                                                <div>
+                                                    <span>REAL</span>
+                                                    <span class="value">75,44%</span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <h4>2021</h4>
+                                                <div>
+                                                    <span>REAL</span>
+                                                    <span class="value">75,44%</span>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <div class="info">*Info text here</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </main>
+
+            <footer class="MainFooter">
+                <div>
+                    <ul class="Diviser">
+                        <li>
+                            <a href="#" class="Button icon-button add">Aporte</a>
+                        </li>
+                        <li>
+                            <a href="#" class="Button icon-button get">Resgate</a>
+                        </li>
+                    </ul>
+                    <p>Powered by Transfero <span>Asset Management Ltd | Bahamas</span></p>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script src="js/App.js"></script>
+</body>
+</html>

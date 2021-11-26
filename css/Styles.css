@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+
+@import url('../vendors/bootstrap-reboot.min.css');
+@import url('../vendors/OverlayScrollbars/OverlayScrollbars.min.css');
+
+@import url('./layout/MainAside.css');
+@import url('./layout/MainContennt.css');
+@import url('./layout/MainFooter.css');
+@import url('./layout/MainHeader.css');
+@import url('./layout/MainLayout.css');
+@import url('./layout/MainMenu.css');
+
+@import url('./components/BalanceInfo.css');
+@import url('./components/Button.css');
+@import url('./components/Chart.css');
+@import url('./components/Collapse.css');
+@import url('./components/CollapseChart.css');
+@import url('./components/Composition.css');
+@import url('./components/ContainerBorder.css');
+@import url('./components/DashboardTable.css');
+@import url('./components/Diviser.css');
+@import url('./components/FinancialWidget.css');
+@import url('./components/LegalText.css');
+@import url('./components/ListCol.css');
+@import url('./components/Logo.css');
+@import url('./components/Menu.css');
+@import url('./components/OverlayScrollbars.css');
+@import url('./components/PortfolioLabel.css');
+@import url('./components/Quotation.css');
+@import url('./components/QuotationInfo.css');
+@import url('./components/RiskIndicator.css');
+@import url('./components/SideContent.css');
+@import url('./components/SideMenu.css');
+@import url('./components/SimpleText.css');
+@import url('./components/Statement.css');
+@import url('./components/StatsMetrics.css');
+@import url('./components/Table.css');
+@import url('./components/UserBox.css');
+@import url('./components/Wallet.css');
+
+:root {
+    color-scheme: light dark;
+    
+    --clrBG: #22144E;
+    --clrBGSecondary: #4343FB;
+    --clrBGHover: #30305B;
+    --clrPrimary: #6ABDF4;
+    --clrSecondary: #81FEEF;
+    --clrDown: #FFADAD;
+    --clrDisabledText: #5B5B81;
+    --clrText: #ffffff;
+    --clrPortfolioLabel: #C2BECA;
+    --clrBorder: #6D6A79;
+
+    --clrOA: #2D2487;
+    --clrADV: #362A4A;
+    --clrB500: #172A2F;
+    --clrLIB: #45333D;
+    --clrCON: #292624;
+    --clrCYC: #172137;
+    --clrGS: #251E6A;
+
+
+
+    --lm_clrBG: #ffffff;
+    --lm_clrBGHover: #f4f4f4;
+    --lm_clrText: #B4AFBF;
+    --lm_clrTextGray: #6C6A78;
+    --lm_clrStrong: #1E0D3B;
+    --lm_clrPrimary: #6ABDF4;
+    --lm_clrSecondary: #02B9A3;
+    --lm_clrDown: #FF6E6E;
+    --lm_clrBorder: #E3E1E7;
+}
+
+/***
+*
+*   RESET APPLICATION STYLES
+*
+***/
+html,
+body {
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+body {
+    color: var(--clrText);
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    min-height: 100vh;
+}
+
+html.open-menu,
+html.open-menu body {
+    overflow: hidden;
+}
+
+*,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+div,
+figure,
+blockquote,
+ul,
+ol {
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+}
+
+img {
+    display: block;
+    width: auto;
+    max-width: 100%;
+}
+
+input {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+}
+
+select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+button {
+    outline: none !important;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-track {
+    background: var(--clrBGHover);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--clrPrimary);
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--clrPrimary);
+}
+
+
+/***
+*
+*   ROOT APPLICATION STYLES
+*
+***/
+#app {
+    overflow: hidden;
+    padding: 10px;
+    background-color: var(--clrBGSecondary);
+}
+
+@media (max-width: 576px) {
+    #app {
+        padding: 5px;
+    }
+}
+
+
+
+/*********************************
+* LIGHT MODE
+*********************************/
+
+body.light-mode {
+    color: var(--lm_clrStrong);
+}

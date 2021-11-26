@@ -1,0 +1,57 @@
+.SideMenu {
+    font-size: 18px;
+    font-weight: 500;
+    text-align: right;
+}
+
+.SideMenu a {
+    color: var(--clrText);
+    /* color: var(--clrDisabledText); */
+    text-decoration: none !important;
+    display: block;
+    padding: 15px 0;
+}
+
+.SideMenu a:hover {
+    /* color: var(--clrText); */
+    background-color: var(--clrBGHover);
+}
+
+.SideMenu li {
+    border-bottom: solid 1px var(--clrBGHover);
+}
+
+/* .SideMenu li.active a {
+    color: var(--clrText);
+} */
+
+.SideMenu li.external-link {
+    border-bottom: none;
+}
+
+.SideMenu li.external-link a {
+    color: var(--clrPrimary);
+    font-size: 14px;
+}
+
+.SideMenu li.external-link a:hover {
+    background-color: transparent;
+    text-decoration: underline !important;
+}
+
+
+/*********************************
+* LIGHT MODE
+*********************************/
+
+.light-mode .SideMenu a {
+    color: var(--lm_clrStrong)
+}
+
+.light-mode .SideMenu a:hover {
+    background-color: var(--lm_clrBGHover);
+}
+
+.light-mode .SideMenu li {
+    border-bottom-color: var(--lm_clrBorder);
+}

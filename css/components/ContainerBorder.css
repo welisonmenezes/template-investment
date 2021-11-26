@@ -1,0 +1,70 @@
+.ContainerBorder {
+    display: block;
+    width: 100%;
+    background-color: var(--clrBGSecondary);
+    padding: 0 10px;
+    position: fixed;
+    left: 0;
+    z-index: 99;
+}
+
+.ContainerBorder.top {
+    top: 0;
+    padding-top: 10px;
+}
+
+.ContainerBorder.bottom {
+    bottom: 0;
+    padding-bottom: 10px;
+}
+
+.ContainerBorder::after {
+    content: "";
+    display: block;
+    background-color: var(--clrBG);
+    height: 10px;
+}
+
+.ContainerBorder.top::after {
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.ContainerBorder.bottom::after {
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+@media (max-width: 576px) {
+    .ContainerBorder {
+        padding: 0 5px;
+    }
+
+    .ContainerBorder.top {
+        padding-top: 5px;
+    }
+
+    .ContainerBorder.bottom {
+        padding-bottom: 5px;
+    }
+
+    .ContainerBorder.top::after {
+        border-top-right-radius: 5px;
+        border-top-left-radius: 5px;
+    }
+    
+    .ContainerBorder.bottom::after {
+        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+    }
+}
+
+
+
+/*********************************
+* LIGHT MODE
+*********************************/
+
+.light-mode .ContainerBorder::after {
+    background-color: var(--lm_clrBG);
+}

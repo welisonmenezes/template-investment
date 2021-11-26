@@ -1,0 +1,30 @@
+.QuotationInfo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.QuotationInfo .col-2 {
+    padding: 0 10px;
+}
+
+.QuotationInfo .col-2 div {
+    margin: 0 auto;
+}
+
+.QuotationInfo .col-2 small {
+    color: var(--clrDisabledText);
+    font-size: 14px;
+    display: block;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .QuotationInfo .col-2 small {
+        font-size: 12px;
+    }
+
+    .QuotationInfo .col-2 {
+        padding: 0 5px;
+    }
+}

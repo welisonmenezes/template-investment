@@ -1,0 +1,51 @@
+.Logo {
+    display: inline-block;
+}
+
+.Logo::before,
+.Logo::after {
+    content: "";
+    display: block;
+    width: 280px;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 280px;
+}
+
+.Logo::before {
+    background-image: url(../../img/svgs/ICO_LOGO.svg);
+}
+
+.Logo::after {
+    background-image: url(../../img/svgs/ICO_LOGO_DARK.svg);
+    display: none;
+}
+
+
+@media (max-width: 768px) {
+    .Logo::before,
+    .Logo::after {
+        height: 30px;
+    }
+
+    .Logo::before,
+    .Logo::after {
+        width: 160px !important;
+        background-size: 160px !important;
+    }
+}
+
+
+
+/*********************************
+* LIGHT MODE
+*********************************/
+
+.light-mode .Logo::before {
+    display: none;
+}
+
+.light-mode .Logo::after {
+    display: block;
+}

@@ -1,0 +1,52 @@
+.UserBox {
+    text-align: center;
+    font-size: 16px;
+    color: var(--clrText);
+}
+
+.UserBox::before {
+    content: "";
+    display: block;
+    width: 35px;
+    height: 35px;
+    background: url(../../img/svgs/IMG_PERFIL.svg) no-repeat center;
+    background-size: 30px;
+    margin: 0 auto;
+}
+
+.UserBox .name {
+    display: block;
+    margin: 15px 0;
+}
+
+.UserBox a {
+    color: var(--clrPrimary);
+}
+
+@media (max-width: 768px) {
+    .UserBox {
+        font-size: 14px;
+    }
+
+    .UserBox .name {
+        margin: 10px 0;
+    }
+}
+
+
+
+/*********************************
+* LIGHT MODE
+*********************************/
+
+.light-mode .UserBox {
+    color: var(--lm_clrStrong);
+}
+
+.light-mode .UserBox a {
+    color: var(--lm_clrTextGray);
+}
+
+.light-mode .UserBox::before {
+    background-image: url(../../img/svgs/IMG_PERFIL_LM.svg);
+}

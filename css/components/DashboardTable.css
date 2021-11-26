@@ -1,0 +1,131 @@
+.DashboardTable .row {
+    font-size: 24px;
+    width: 100%;
+    border-bottom: solid 1px var(--clrBGHover);
+    padding: 20px 10px 20px 10px;
+    display: block;
+    text-decoration: none !important;
+    position: relative;
+    color: var(--clrText);
+}
+
+.DashboardTable .row .percentage {
+    color: green;
+}
+.DashboardTable .row.is-negative .percentage {
+    color: red;
+}
+
+.DashboardTable .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.DashboardTable .row > div {
+    white-space: nowrap;
+}
+
+.DashboardTable .row > .col-1 {
+    width: 30%;
+}
+
+.DashboardTable .row > .col-2 {
+    width: 15%;
+}
+
+.DashboardTable .row > .col-3 {
+    width: 15%;
+}
+
+.DashboardTable .row > .col-4 {
+    width: 10%;
+}
+
+.DashboardTable .row .col-5 {
+    width: 30%;
+    text-align: right;
+
+}
+
+.DashboardTable a.row:hover {
+    background-color: var(--clrBGHover);
+}
+
+.DashboardTable .row.inactive,
+.DashboardTable .row.inactive .PortfolioLabel {
+    color: var(--clrBorder);
+}
+
+.DashboardTable .show-992 {
+    display: none;
+}
+
+@media (max-width: 992px) {
+    .DashboardTable .row {
+        font-size: 16px;
+    }
+
+    .DashboardTable .row > div {
+        width: 100% !important;
+    }
+
+    .DashboardTable .hide-992 {
+        display: none !important;
+    }
+
+    .DashboardTable .show-992 {
+        display: block;
+    }
+
+    .DashboardTable .row > .col-1 {
+        max-width: 40px;
+    }
+
+    .DashboardTable .row > .col-2 {
+        max-width: 55px;
+    }
+
+    .DashboardTable .PortfolioLabel > div:last-child {
+        display: none;
+    }
+
+}
+
+@media (max-width: 576px) {
+    .DashboardTable {
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+
+    .DashboardTable .row > .col-2 {
+        max-width: 40px;
+    }
+}
+
+@media (max-width: 400px) {
+    .DashboardTable .row {
+        font-size: 14px;
+    }
+}
+
+
+
+/*********************************
+* LIGHT MODE
+*********************************/
+
+.light-mode .DashboardTable .row {
+    color: var(--lm_clrStrong);
+    border-bottom-color: var(--lm_clrBorder);
+}
+
+.light-mode .DashboardTable .row.inactive,
+.light-mode .DashboardTable .row.inactive .PortfolioLabel {
+    color: var(--lm_clrText);
+}
+
+.light-mode .DashboardTable a.row:hover {
+    background-color: var(--lm_clrBGHover);
+}

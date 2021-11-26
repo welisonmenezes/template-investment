@@ -1,0 +1,9 @@
+.OverlayScrollbars.os-theme-dark>.os-scrollbar>.os-scrollbar-track>.os-scrollbar-handle {
+    background-color: var(--clrPrimary);
+}
+
+.OverlayScrollbars.os-theme-light>.os-scrollbar>.os-scrollbar-track>.os-scrollbar-handle, 
+.OverlayScrollbars.os-theme-dark>.os-scrollbar>.os-scrollbar-track, 
+.OverlayScrollbars.os-theme-light>.os-scrollbar>.os-scrollbar-track {
+    background-color: var(--clrBGHover);
+}

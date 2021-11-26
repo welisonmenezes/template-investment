@@ -1,0 +1,80 @@
+.PortfolioLabel {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    align-items: center;
+    color: var(--clrText);
+}
+
+.PortfolioLabel > div:first-child {
+    width: 48px;
+    height: 48px;
+    border-radius: 24px;
+    font-size: 12px;
+    color: var(--clrPortfolioLabel);
+    font-weight: bold;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    text-align: right;
+}
+
+.PortfolioLabel > div:last-child {
+    font-size: 24px;
+    font-weight: 500;
+    margin-left: 20px;
+}
+
+
+.PortfolioLabel.oa > div:first-child {
+    background-color: var(--clrOA);
+}
+
+.PortfolioLabel.adv > div:first-child {
+    background-color: var(--clrADV);
+}
+
+.PortfolioLabel.b500 > div:first-child {
+    background-color: var(--clrB500);
+}
+
+.PortfolioLabel.lib > div:first-child {
+    background-color: var(--clrLIB);
+}
+
+.PortfolioLabel.con > div:first-child {
+    background-color: var(--clrCON);
+}
+
+.PortfolioLabel.cyc > div:first-child {
+    background-color: var(--clrCYC);
+}
+
+.PortfolioLabel.gs > div:first-child {
+    background-color: var(--clrGS);
+}
+
+@media (max-width: 992px) {
+    .PortfolioLabel > div:first-child {
+        font-size: 10px;
+        width: 32px;
+        height: 32px;
+        border-radius: 16px;
+        padding: 1px;
+    }
+
+    .PortfolioLabel > div:last-child {
+        font-size: 16px;
+        margin-left: 10px;
+    }
+}
+
+
+/*********************************
+* LIGHT MODE
+*********************************/
+
+.light-mode .PortfolioLabel {
+    color: var(--lm_clrStrong);
+}

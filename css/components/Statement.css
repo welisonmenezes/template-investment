@@ -1,0 +1,66 @@
+.Statement {
+    color: var(--clrText);
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 500;
+}
+
+.Statement li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Statement li::after {
+    content: "";
+    display: block;
+    width: 12px;
+    height: 12px;
+    background: url(../../img/svgs/EXTRATO.svg) no-repeat center;
+    background-size: 12px;
+    margin-left: 10px;
+}
+
+.Statement li > div {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 15px 15px 15px 0;
+    border-bottom: solid 1px var(--clrBGHover);
+    width: 100%;
+}
+
+.Statement li:last-child > div {
+    border-bottom: none;
+}
+
+.Statement li span {
+    display: block;
+}
+
+.Statement li span:first-child {
+    margin-bottom: 5px;
+}
+
+@media (max-width: 768px) {
+    .Statement {
+        font-size: 14px;
+    }
+
+    .Statement li::after {
+        margin-left: 5px;
+    }
+}
+
+
+/*********************************
+* LIGHT MODE
+*********************************/
+
+.light-mode .Statement {
+    color: var(--lm_clrStrong);
+}
+
+.light-mode .Statement li > div {
+    border-bottom-color: var(--lm_clrBorder);
+}

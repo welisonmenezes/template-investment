@@ -1,0 +1,55 @@
+.Menu {
+    font-size: 16px;
+    border-top: solid 1px var(--clrBGHover);
+}
+
+.Menu li {
+    border-bottom: solid 1px var(--clrBGHover);
+}
+
+.Menu a,
+.Menu span {
+    display: block;
+}
+
+.Menu a {
+    padding: 24px 10px;
+    color: var(--clrPrimary);
+}
+
+.Menu a:hover {
+    background-color: var(--clrBGHover);
+    text-decoration: none;
+}
+
+.Menu span {
+    max-width: 210px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .Menu {
+        font-size: 14px;
+    }
+
+    .Menu span {
+        max-width: 190px;
+    }
+}
+
+
+/*********************************
+* LIGHT MODE
+*********************************/
+
+.light-mode .Menu {
+    border-top-color: var(--lm_clrBorder);
+}
+
+.light-mode .Menu li {
+    border-bottom-color: var(--lm_clrBorder);
+}
+
+.light-mode .Menu a:hover {
+    background-color: var(--lm_clrBGHover);
+}

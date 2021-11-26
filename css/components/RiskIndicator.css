@@ -1,0 +1,172 @@
+.RiskIndicator .indicator,
+.RiskIndicator .indicator > div {
+    height: 20px;
+    position: relative;
+}
+
+.RiskIndicator .indicator::after,
+.RiskIndicator .indicator > div::after {
+    content: "";
+    display: block;
+    width: 0; 
+    height: 0; 
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    right: 0;
+    top: 0;
+    position: absolute;
+}
+
+.RiskIndicator .indicator {
+    width: 100%;
+    background-color: var(--clrBGHover);
+}
+.RiskIndicator .indicator::after {
+    border-left: 10px solid var(--clrBGHover);
+    background-color: var(--clrBG);
+}
+
+.RiskIndicator .indicator > div {
+    width: 0;
+    background: var(--clrPrimary);
+    background: linear-gradient(90deg, var(--clrBGHover) 0%, var(--clrPrimary) 90%);
+}
+.RiskIndicator .indicator > div::after {
+    border-left: 10px solid var(--clrPrimary);
+    background-color: var(--clrBGHover);
+}
+
+.RiskIndicator.one .indicator > div {
+    width: 20%;
+}
+.RiskIndicator.two .indicator > div {
+    width: 40%;
+}
+.RiskIndicator.three .indicator > div {
+    width: 60%;
+}
+.RiskIndicator.four .indicator > div {
+    width: 80%;
+}
+.RiskIndicator.five .indicator > div {
+    width: 100%;
+}
+.RiskIndicator.five .indicator::after {
+    border-left: 10px solid var(--clrPrimary);
+}
+
+
+.RiskIndicator .numbers {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    color: var(--clrDisabledText);
+    padding-top: 10px;
+    text-align: right;
+}
+.RiskIndicator .numbers span {
+    display: block;
+    width: 100%;
+    font-size: 16px;
+}
+
+.RiskIndicator.one .one {
+    color: var(--clrPrimary);
+}
+
+.RiskIndicator.two .one,
+.RiskIndicator.two .two {
+    color: var(--clrPrimary);
+}
+
+.RiskIndicator.three .one,
+.RiskIndicator.three .two,
+.RiskIndicator.three .three {
+    color: var(--clrPrimary);
+}
+
+.RiskIndicator.four .one,
+.RiskIndicator.four .two,
+.RiskIndicator.four .three,
+.RiskIndicator.four .four {
+    color: var(--clrPrimary);
+}
+
+.RiskIndicator.five .one,
+.RiskIndicator.five .two,
+.RiskIndicator.five .three,
+.RiskIndicator.five .four,
+.RiskIndicator.five .five {
+    color: var(--clrPrimary);
+}
+
+@media (max-width: 768px) {
+    .RiskIndicator .numbers span {
+        font-size: 14px;
+    }
+
+    .RiskIndicator .numbers {
+        padding-top: 5px;
+    }
+}
+
+
+/*********************************
+* LIGHT MODE
+*********************************/
+
+.light-mode .RiskIndicator .indicator {
+    background-color: var(--lm_clrBGHover);
+}
+.light-mode .RiskIndicator .indicator::after {
+    border-left: 10px solid var(--lm_clrBGHover);
+    background-color: var(--lm_clrBG);
+}
+
+.light-mode .RiskIndicator .indicator > div {
+    /* background: var(--lm_clrStrong); */
+    background: linear-gradient(90deg, var(--lm_clrBGHover) 0%, var(--clrPrimary) 90%);
+}
+.light-mode .RiskIndicator .indicator > div::after {
+    /* border-left: 10px solid var(--lm_clrStrong); */
+    background-color: var(--lm_clrBGHover);
+}
+
+.light-mode .RiskIndicator.five .indicator::after {
+    border-left: 10px solid var(--lm_clrStrong);
+}
+
+.light-mode .RiskIndicator .numbers {
+    color: var(--lm_clrText);
+}
+
+/* .light-mode .RiskIndicator.one .one {
+    color: var(--lm_clrStrong);
+}
+
+.light-mode .RiskIndicator.two .one,
+.light-mode .RiskIndicator.two .two {
+    color: var(--lm_clrStrong);
+}
+
+.light-mode .RiskIndicator.three .one,
+.light-mode .RiskIndicator.three .two,
+.light-mode .RiskIndicator.three .three {
+    color: var(--lm_clrStrong);
+}
+
+.light-mode .RiskIndicator.four .one,
+.light-mode .RiskIndicator.four .two,
+.light-mode .RiskIndicator.four .three,
+.light-mode .RiskIndicator.four .four {
+    color: var(--lm_clrStrong);
+}
+
+.light-mode .RiskIndicator.five .one,
+.light-mode .RiskIndicator.five .two,
+.light-mode .RiskIndicator.five .three,
+.light-mode .RiskIndicator.five .four,
+.light-mode .RiskIndicator.five .five {
+    color: var(--lm_clrStrong);
+} */

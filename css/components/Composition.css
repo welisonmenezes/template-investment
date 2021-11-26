@@ -1,0 +1,55 @@
+.Composition {
+    font-size: 20px;
+    color: var(--clrText);
+}
+
+.Composition li,
+.Composition li > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Composition li {
+    padding: 10px 0;
+    border-bottom: solid 1px var(--clrBGHover);
+}
+
+.Composition li:last-child {
+    border-bottom: none;
+}
+
+.Composition span {
+    display: block;
+    font-weight: 500;
+}
+
+.Composition li > div span {
+    min-width: 60px;
+    margin-right: 80px;
+}
+
+
+@media (max-width: 768px) {
+    .Composition {
+        font-size: 16px;
+    }
+
+    .Composition li > div span {
+        min-width: 60px;
+        margin-right: 30px;
+    }
+}
+
+
+/*********************************
+* LIGHT MODE
+*********************************/
+
+.light-mode .Composition {
+    color: var(--lm_clrStrong);
+}
+
+.light-mode .Composition li {
+    border-bottom-color: var(--lm_clrBorder);
+}

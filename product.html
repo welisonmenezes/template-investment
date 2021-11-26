@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title>Transfero Prime</title>
+    <link href="img/favicon.png" rel="apple-touch-icon" sizes="144x144">
+    <link href="img/favicon.png" rel="apple-touch-icon" sizes="120x120">
+    <link href="img/favicon.png" rel="apple-touch-icon" sizes="76x76">
+    <link href="img/favicon.png" rel="shortcut icon">
+    <link href="img/favicon.png" rel="icon">
+    <link rel="stylesheet" href="css/Styles.css">
+</head>
+<body>
+    <div id="app">
+        <div class="MainLayout">
+            <div class="ContainerBorder top"></div>
+            <div class="ContainerBorder bottom"></div>
+
+            <header class="MainHeader">
+                <div>
+                    <div class="container">
+                        <div class="col col-1">
+                            <a href="#" class="Logo"></a>
+                        </div>
+                        <div class="col col-2 hide-992">
+                            <div class="Wallet">
+                                <h6>Valor da sua Carteira</h6>
+                                <p>R$ 5.139.239.160,94</p>
+                            </div>
+                            <ul class="Diviser">
+                                <li>
+                                    <a href="#" class="Button icon-button add">Aporte</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="Button icon-button get">Resgate</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col col-3">
+                            <ul class="Diviser">
+                                <li class="hide-992">
+                                    <ul class="Diviser small">
+                                        <li>
+                                            <button type="button" class="Button moon" onclick="SetDarkOrLightMode(true)"></button>
+                                        </li>
+                                        <li>
+                                            <button type="button" class="Button sun off" onclick="SetDarkOrLightMode(false)"></button>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#" class="Button dash"></a>
+                                </li>
+                                <li>
+                                    <button type="button" class="Button menu" onclick="OpenMainMenu()"></button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <aside class="MainMenu">
+                <div>
+                    <div class="menu-header">
+                        <button type="button" class="Button close" onclick="CloseMainMenu()"></button>
+                        <ul class="Diviser small">
+                            <li>
+                                <button type="button" class="Button moon" onclick="SetDarkOrLightMode(true)"></button>
+                            </li>
+                            <li>
+                                <button type="button" class="Button sun off" onclick="SetDarkOrLightMode(false)"></button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="menu-body">
+                        <div class="UserBox">
+                            <span class="name">Welison Menezes</span>
+                            <a href="#">Meus Dados</a>
+                        </div>
+                        <ul class="Menu">
+                            <li>
+                                <a href="#">
+                                    <span>Alterar Senha</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>Autenticação de 2 Fatores</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>FAQ</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>Suporte</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>Logout</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </aside>
+            <div class="MainMenuBG" onclick="CloseMainMenu()"></div>
+
+            <aside class="MainAside">
+                <div>
+                    <div class="container">
+                        <div class="col-1">
+                            <div class="BalanceInfo">
+                                <div class="PortfolioLabel cyc">
+                                    <div>CCY</div>
+                                </div>
+                                <div class="Wallet with-control">
+                                    <h6>C. Cyclical</h6>
+                                    <p>R$ 5.160.940,13</p>
+                                    <button type="button" class="Button eye"></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <ul class="FinancialWidget">
+                                <li>
+                                    Aporte R$ 100.000.00
+                                </li>
+                                <li>
+                                    Rendimento R$ 100.000.00
+                                </li>
+                            </ul>
+                            <div class="QuotationInfo">
+                                <div class="Quotation up">
+                                    3,25%
+                                </div>
+                                <div class="col-2">
+                                    <div class="Chart chart-demo-quotation small"></div>
+                                    <small>12/01/2022</small>
+                                </div>
+                                <button type="button" class="Button more-less more" onclick="ToggleCollapseChart(event)"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <main class="MainContent">
+                <div>
+
+                    <div class="CollapseChart">
+                        <div class="Chart chart-demo-1"></div>
+                    </div>
+
+                    <div class="SideContent">
+                        <nav>
+                            <div>
+                                <ul class="SideMenu">
+                                    <li class="active">
+                                        <a href="#" onclick="GoToNavigation(event, '#demo-collapse-1')">Composição da Carteira</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" onclick="GoToNavigation(event, '#demo-collapse-2')">Extrato de Transações</a>
+                                    </li>
+                                    <li class="external-link">
+                                        <a href="#">Detalhes do Produto</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                        
+                        <section>
+                            <div class="Collpase" id="demo-collapse-1">
+                                <div class="Collapse-header">
+                                    <h2>Composição da Carteira</h2>
+                                    <button type="button" class="Button more-less more" onclick="OnOpenCollapsed('#demo-collapse-1')"></button>
+                                </div>
+                                <div class="Collapse-body">
+                                    <ul class="Composition">
+                                        <li>
+                                            <div>
+                                                <span>BTC</span>
+                                                <div class="Quotation up">3,25%</div>
+                                            </div>
+                                            <span>10%</span>
+                                        </li>
+                                        <li>
+                                            <div>
+                                                <span>USDT</span>
+                                                <div class="Quotation down">3,25%</div>
+                                            </div>
+                                            <span>10%</span>
+                                        </li>
+                                        <li>
+                                            <div>
+                                                <span>BTC</span>
+                                                <div class="Quotation up">3,25%</div>
+                                            </div>
+                                            <span>10%</span>
+                                        </li>
+                                        <li>
+                                            <div>
+                                                <span>BTC</span>
+                                                <div class="Quotation down">3,25%</div>
+                                            </div>
+                                            <span>10%</span>
+                                        </li>
+                                        <li>
+                                            <div>
+                                                <span>BTC</span>
+                                                <div class="Quotation up">3,25%</div>
+                                            </div>
+                                            <span>10%</span>
+                                        </li>
+                                        <li>
+                                            <div>
+                                                <span>USDT</span>
+                                                <div class="Quotation down">3,25%</div>
+                                            </div>
+                                            <span>10%</span>
+                                        </li>
+                                        <li>
+                                            <div>
+                                                <span>BTC</span>
+                                                <div class="Quotation up">3,25%</div>
+                                            </div>
+                                            <span>10%</span>
+                                        </li>
+                                        <li>
+                                            <div>
+                                                <span>BTC</span>
+                                                <div class="Quotation down">3,25%</div>
+                                            </div>
+                                            <span>10%</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="Collpase" id="demo-collapse-2">
+                                <div class="Collapse-header">
+                                    <h2>Extrato de Transações</h2>
+                                    <button type="button" class="Button more-less more" onclick="OnOpenCollapsed('#demo-collapse-2')"></button>
+                                </div>
+                                <div class="Collapse-body">
+                                    <ul class="Statement">
+                                        <li>
+                                            <div>
+                                                <div>
+                                                    <span>Aporte</span>
+                                                    <span>R$ 10.000,00</span>
+                                                </div>
+                                                <div>
+                                                    <span>Ago 10.2021</span>
+                                                    <span>Concluído</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div>
+                                                <div>
+                                                    <span>Aporte</span>
+                                                    <span>R$ 2.999.000,00</span>
+                                                </div>
+                                                <div>
+                                                    <span>Ago 10.2021</span>
+                                                    <span>Concluído</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div>
+                                                <div>
+                                                    <span>Aporte</span>
+                                                    <span>R$ 10.000,00</span>
+                                                </div>
+                                                <div>
+                                                    <span>Ago 10.2021</span>
+                                                    <span>Concluído</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div>
+                                                <div>
+                                                    <span>Aporte</span>
+                                                    <span>R$ 10.000,00</span>
+                                                </div>
+                                                <div>
+                                                    <span>Ago 10.2021</span>
+                                                    <span>Concluído</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="external-link show-992">
+                                <a href="#">Detalhes do produto</a>
+                            </div>
+
+                            <div class="Collpase" id="demo-collapse-3">
+                                <div class="Collapse-header">
+                                    <h2>Aviso Legal</h2>
+                                    <button type="button" class="Button more-less more" onclick="OnOpenCollapsed('#demo-collapse-3')"></button>
+                                </div>
+                                <div class="Collapse-body">
+                                    <div class="LegalText">
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo est facilis recusandae, sit veritatis esse distinctio quam sequi, qui rem voluptates veniam earum minus obcaecati accusamus nobis, delectus beatae blanditiis!</p>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo est facilis recusandae, sit veritatis esse distinctio quam sequi, qui rem voluptates veniam earum minus obcaecati accusamus nobis, delectus beatae blanditiis!</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </main>
+
+            <footer class="MainFooter">
+                <div>
+                    <ul class="Diviser">
+                        <li>
+                            <a href="#" class="Button icon-button add">Aporte</a>
+                        </li>
+                        <li>
+                            <a href="#" class="Button icon-button get">Resgate</a>
+                        </li>
+                    </ul>
+                    <p>Powered by Transfero <span>Asset Management Ltd | Bahamas</span></p>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script src="js/App.js"></script>
+</body>
+</html>

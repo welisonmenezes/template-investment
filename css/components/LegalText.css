@@ -1,0 +1,40 @@
+.LegalText {
+    color: var(--clrDisabledText);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.LegalText h2 {
+    margin-bottom: 15px;
+    font-weight: bold;
+    font-size: 18px;
+    color: var(--clrText);
+}
+
+.LegalText p {
+    margin-bottom: 15px;
+    line-height: 24px;
+}
+
+@media (max-width: 768px) {
+    .LegalText {
+        font-size: 14px;
+    }
+
+    .LegalText h2 {
+        font-size: 14px;
+    }
+}
+
+
+/*********************************
+* LIGHT MODE
+*********************************/
+
+.light-mode .LegalText {
+    color: var(--lm_clrText);
+}
+
+.light-mode .LegalText h2 {
+    color: var(--lm_clrStrong);
+}

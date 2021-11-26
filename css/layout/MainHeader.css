@@ -1,0 +1,131 @@
+.MainHeader {
+    width: 100%;
+    /* height: 100px; */
+    left: 0;
+    top: 10px;
+    position: fixed;
+    z-index: 98;
+    padding: 0 10px;
+    background-color: transparent;
+}
+
+.MainHeader > div {
+    background-color: var(--clrBG);
+    padding: 30px 20px 95px 20px;
+}
+
+.MainHeader > div > .container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.MainHeader .col-2 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.MainHeader .col-2 .Wallet {
+    margin-top: -15px;
+}
+
+.MainHeader .col-2 .Diviser::before {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 22px;
+    background-color: var(--clrDisabledText);
+    margin: 0 50px;
+}
+
+.MainHeader .col-3 > .Diviser > li::after {
+    content: "";
+}
+
+.scrolled-window .MainHeader > div {
+    border-bottom: solid 1px var(--clrBGHover);
+}
+
+@media (max-width: 1220px) {
+    .MainHeader .col-2 .Diviser::before {
+        margin: 0 20px;
+    }
+
+    .MainHeader .col-3 > .Diviser > li::after {
+        margin: 0 5px;
+    }
+}
+
+@media (max-width: 1110px) {
+    .MainHeader .col-1 .Logo::before {
+        width: 200px;
+        background-size: 200px;
+    }
+
+    .MainHeader .col-2 .Wallet {
+        font-size: 20px;
+        line-height: 22px;
+    }
+
+    .MainHeader .col-2 .Diviser::before {
+        margin: 0 15px;
+    }
+}
+
+@media (max-width: 992px) {
+    .hide-992 {
+        display: none !important;
+    }
+
+    .MainHeader > div {
+        padding: 20px 20px 75px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .MainHeader .col-3 {
+        margin-top: -10px;
+    }
+
+    .MainHeader > div {
+        padding-bottom: 80px;
+    }
+}
+
+@media (max-width: 620px) {
+    .MainHeader > div {
+        padding-bottom: 110px;
+    }
+}
+
+@media (max-width: 576px) {
+    .MainHeader {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .MainHeader > div {
+        padding: 10px 10px 95px 10px;
+    }
+}
+
+
+
+/*********************************
+* LIGHT MODE
+*********************************/
+
+.light-mode .MainHeader > div {
+    background-color: var(--lm_clrBG);
+}
+
+.light-mode .MainHeader .col-2 .Diviser::before {
+    background-color: var(--lm_clrText);
+}
+
+.light-mode.scrolled-window .MainHeader > div {
+    border-bottom: solid 1px var(--lm_clrBorder);
+}

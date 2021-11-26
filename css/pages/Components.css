@@ -1,0 +1,24 @@
+.sample-overlay-scrollbars .os-host {
+    height: 300px;
+    max-width: 710px;
+    margin: 0 auto;
+}
+
+.sample-overlay-scrollbars .content {
+    min-width: 900px;
+    padding-right: 20px;
+}
+
+#app {
+    background-color: var(--clrBG);
+}
+
+
+
+/*********************************
+* LIGHT MODE
+*********************************/
+
+.light-mode #app {
+    background-color: var(--lm_clrBG);
+}

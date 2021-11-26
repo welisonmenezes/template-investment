@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="dark light">
+    <meta name="description" content="">
+    <title>Transfero Prime</title>
+    <link href="img/favicon.png" rel="apple-touch-icon" sizes="144x144">
+    <link href="img/favicon.png" rel="apple-touch-icon" sizes="120x120">
+    <link href="img/favicon.png" rel="apple-touch-icon" sizes="76x76">
+    <link href="img/favicon.png" rel="shortcut icon">
+    <link href="img/favicon.png" rel="icon">
+    <link rel="stylesheet" href="css/Styles.css">
+</head>
+<body>
+    <div id="app">
+        <div class="MainLayout">
+            <div class="ContainerBorder top"></div>
+            <div class="ContainerBorder bottom"></div>
+
+            <header class="MainHeader">
+                <div>
+                    <div class="container">
+                        <div class="col col-1">
+                            <a href="#" class="Logo"></a>
+                        </div>
+                        <div class="col col-2 hide-992">
+                            <div class="Wallet">
+                                <h6>Valor da sua Carteira</h6>
+                                <p>R$ 5.139.239.160,94</p>
+                            </div>
+                            <ul class="Diviser">
+                                <li>
+                                    <a href="#" class="Button icon-button add">Aporte</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="Button icon-button get">Resgate</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col col-3">
+                            <ul class="Diviser">
+                                <li class="hide-992">
+                                    <ul class="Diviser small">
+                                        <li>
+                                            <button type="button" class="Button moon" onclick="SetDarkOrLightMode(true)"></button>
+                                        </li>
+                                        <li>
+                                            <button type="button" class="Button sun off" onclick="SetDarkOrLightMode(false)"></button>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#" class="Button dash"></a>
+                                </li>
+                                <li>
+                                    <button type="button" class="Button menu" onclick="OpenMainMenu()"></button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <aside class="MainMenu">
+                <div>
+                    <div class="menu-header">
+                        <button type="button" class="Button close" onclick="CloseMainMenu()"></button>
+                        <ul class="Diviser small">
+                            <li>
+                                <button type="button" class="Button moon" onclick="SetDarkOrLightMode(true)"></button>
+                            </li>
+                            <li>
+                                <button type="button" class="Button sun off" onclick="SetDarkOrLightMode(false)"></button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="menu-body">
+                        <div class="UserBox">
+                            <span class="name">Welison Menezes</span>
+                            <a href="#">Meus Dados</a>
+                        </div>
+                        <ul class="Menu">
+                            <li>
+                                <a href="#">
+                                    <span>Alterar Senha</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>Autenticação de 2 Fatores</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>FAQ</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>Suporte</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>Logout</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </aside>
+            <div class="MainMenuBG" onclick="CloseMainMenu()"></div>
+
+            <aside class="MainAside">
+                <div>
+                    <div class="container">
+                        <div class="col-1">
+                            <div class="Wallet with-control">
+                                <h6>Valor da sua Carteira</h6>
+                                <p>R$ 5.139.239.160,94</p>
+                                <button type="button" class="Button eye"></button>
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <ul class="FinancialWidget">
+                                <li>
+                                    Aporte R$ 100.000.00
+                                </li>
+                                <li>
+                                    Rendimento R$ 100.000.00
+                                </li>
+                            </ul>
+                            <div class="QuotationInfo">
+                                <div class="Quotation up">
+                                    3,25%
+                                </div>
+                                <div class="col-2">
+                                    <div class="Chart chart-demo-quotation small"></div>
+                                    <small>12/01/2022</small>
+                                </div>
+                                <button type="button" class="Button more-less more" onclick="ToggleCollapseChart(event)"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <main class="MainContent">
+                <div>
+
+                    <div class="CollapseChart">
+                        <div class="Chart chart-demo-1"></div>
+                    </div>
+
+                    <div class="DashboardTable">
+                        <a href="#" class="row">
+                            <div class="col-1">
+                                <div class="PortfolioLabel oa">
+                                    <div>OA</div>
+                                    <div>Outros Ativos</div>
+                                </div>
+                            </div>
+                            <div class="col-2">OA</div>
+                            <div class="col-3">
+                                <div class="Quotation up">
+                                    3,25%
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="Chart micro up chart-table-demo-1"></div>
+                            </div>
+                            <div class="col-5">R$ 5.139.239.160,94</div>
+                        </a>
+                        <a href="#" class="row">
+                            <div class="col-1">
+                                <div class="PortfolioLabel adv">
+                                    <div>ADV</div>
+                                    <div>Advanced</div>
+                                </div>
+                            </div>
+                            <div class="col-2">ADV</div>
+                            <div class="col-3">
+                                <div class="Quotation down">
+                                    3,25%
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="Chart micro down chart-table-demo-2"></div>
+                            </div>
+                            <div class="col-5">R$ 139.239.160,94</div>
+                        </a>
+                        <a href="#" class="row">
+                            <div class="col-1">
+                                <div class="PortfolioLabel b500">
+                                    <div>B500</div>
+                                    <div>BRZ500</div>
+                                </div>
+                            </div>
+                            <div class="col-2">B500</div>
+                            <div class="col-3">
+                                <div class="Quotation up">
+                                    13,25%
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="Chart micro up chart-table-demo-3"></div>
+                            </div>
+                            <div class="col-5">R$ 639.160,94</div>
+                        </a>
+                        <div class="row inactive">
+                            <div class="col-1">
+                                <div class="PortfolioLabel lib">
+                                    <div>LIB</div>
+                                    <div>LIBRA</div>
+                                </div>
+                            </div>
+                            <div class="col-2">LIB</div>
+                            <div class="col-3">
+                                <div class="Quotation down">
+                                    183,25%
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="Chart micro down chart-table-demo-4"></div>
+                            </div>
+                            <div class="col-5">
+                                <a href="#" class="Button default">Quero Investir</a> 
+                            </div>
+                        </div>
+                        <div class="row inactive">
+                            <div class="col-1">
+                                <div class="PortfolioLabel con">
+                                    <div>CON</div>
+                                    <div>Conservative</div>
+                                </div>
+                            </div>
+                            <div class="col-2">CON</div>
+                            <div class="col-3">
+                                <div class="Quotation up">
+                                    0,25%
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="Chart micro up chart-table-demo-5"></div>
+                            </div>
+                            <div class="col-5">
+                                <a href="#" class="Button default">Quero Investir</a> 
+                            </div>
+                        </div>
+                        <div class="row inactive">
+                            <div class="col-1">
+                                <div class="PortfolioLabel cyc">
+                                    <div>CYC</div>
+                                    <div>C. Cyclical</div>
+                                </div>
+                            </div>
+                            <div class="col-2">CYC</div>
+                            <div class="col-3">
+                                <div class="Quotation down">
+                                    183,25%
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="Chart micro down chart-table-demo-6"></div>
+                            </div>
+                            <div class="col-5">
+                                <a href="#" class="Button default">Quero Investir</a> 
+                            </div>
+                        </div>
+                        <div class="row inactive">
+                            <div class="col-1">
+                                <div class="PortfolioLabel gs">
+                                    <div>GS</div>
+                                    <div>Global State</div>
+                                </div>
+                            </div>
+                            <div class="col-2">GS</div>
+                            <div class="col-3">
+                                <div class="Quotation up">
+                                    0,25%
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="Chart micro up chart-table-demo-7"></div>
+                            </div>
+                            <div class="col-5">
+                                <a href="#" class="Button default">Quero Investir</a> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <footer class="MainFooter">
+                <div>
+                    <ul class="Diviser">
+                        <li>
+                            <a href="#" class="Button icon-button add">Aporte</a>
+                        </li>
+                        <li>
+                            <a href="#" class="Button icon-button get">Resgate</a>
+                        </li>
+                    </ul>
+                    <p>Powered by Transfero <span>Asset Management Ltd | Bahamas</span></p>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script src="js/App.js"></script>
+</body>
+</html>

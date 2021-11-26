@@ -1,0 +1,334 @@
+.Button {
+    cursor: pointer;
+    text-decoration: none !important;
+}
+
+.Button.default {
+    height: 32px;
+    line-height: 30px;
+    border: solid 1px var(--clrBorder);
+    border-radius: 16px;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: var(--clrBorder);
+    cursor: pointer;
+    display: inline-block;
+    padding: 0 2rem;
+    font-weight: 500;
+}
+
+.Button.default:hover,
+.Button.default.active {
+    text-decoration: none;
+    color: var(--clrText);
+    border-color: var(--clrText);
+}
+
+.Button.icon-button {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: var(--clrText);
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.Button.icon-button::before {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position: center;
+}
+
+.Button.icon-button.add::before {
+    background-image: url(../../img/svgs/IMG_APORTE.svg);
+}
+
+.Button.icon-button.get::before {
+    background-image: url(../../img/svgs/IMG_RESGATE.svg);
+    background-size: 18px;
+}
+
+.Button.dash {
+    display: inline-block;
+}
+.Button.dash::before {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: url(../../img/svgs/IMG_HOME.svg) no-repeat center;
+    background-size: 30px;
+}
+
+.Button.close {
+    display: inline-block;
+}
+.Button.close::before {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: url(../../img/svgs/ICO_CLOSE.svg) no-repeat center;
+    background-size: 26px;
+}
+
+.Button.menu {
+    display: inline-block;
+}
+.Button.menu::before {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 30px;
+    background: url(../../img/svgs/ICO_MENU.svg) no-repeat center;
+    background-size: 40px;
+}
+
+.Button.more-less {
+    display: inline-block;
+}
+
+.Button.more-less::before,
+.Button.more-less::after {
+    content: "";
+    display: block;
+    width: 16px;
+    height: 16px;
+    background-size: 16px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.Button.more-less::before {
+    background-image: url(../../img/svgs/IMG_ABRIR.svg);
+}
+
+.Button.more-less::after {
+    background-image: url(../../img/svgs/IMG_FECHAR.svg);
+}
+
+.Button.more-less.less::before {
+    display: none;
+}
+
+.Button.more-less.more::after {
+    display: none;
+}
+
+.Button.sun {
+    display: inline-block;
+}
+
+.Button.sun::before,
+.Button.sun::after {
+    content: "";
+    display: block;
+    width: 25px;
+    height: 25px;
+    background-size: 25px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.Button.sun::before {
+    background-image: url(../../img/svgs/ICO_SOL.svg);
+}
+
+.Button.sun::after {
+    background-image: url(../../img/svgs/ICO_SOL_OFF.svg);
+    display: none;
+}
+
+.Button.sun.off::before {
+    display: none;
+}
+
+.Button.sun.off::after {
+    display: block;
+}
+
+.Button.moon {
+    display: inline-block;
+}
+
+.Button.moon::before,
+.Button.moon::after {
+    content: "";
+    display: block;
+    width: 25px;
+    height: 25px;
+    background-size: 17px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.Button.moon::before {
+    background-image: url(../../img/svgs/ICO_LUA.svg);
+}
+
+.Button.moon::after {
+    background-image: url(../../img/svgs/ICO_LUA_OFF.svg);
+    display: none;
+}
+
+.Button.moon.off::before {
+    display: none;
+}
+
+.Button.moon.off::after {
+    display: block;
+}
+
+.Button.eye {
+    display: inline-block;
+}
+
+.Button.eye::before,
+.Button.eye::after {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.Button.eye::before {
+    background-image: url(../../img/svgs/IMG_OLHO.svg);
+}
+
+.Button.eye::after {
+    background-image: url(../../img/svgs/IMG_OLHO_OFF.svg);
+    display: none;
+}
+
+.Button.eye.off::before {
+    display: none;
+}
+
+.Button.eye.off::after {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .Button.default {
+        font-size: 10px;
+        padding: 0 10px;
+    }
+
+    .Button.icon-button {
+        font-size: 18px;
+    }
+
+    .Button.icon-button::before {
+        margin-right: 5px;
+    }
+
+    .Button.dash::before {
+        background-size: 24px;
+    }
+
+    .Button.close::before {
+        background-size: 20px;
+    }
+
+    .Button.menu::before {
+        background-size: 32px;
+    }
+
+    .Button.sun::before,
+    .Button.sun::after {
+        width: 20px;
+        height: 20px;
+        background-size: 20px;
+    }
+
+    .Button.moon::before,
+    .Button.moon::after {
+        width: 20px;
+        height: 20px;
+        background-size: 14px;
+    }
+
+    .Button.eye::before,
+    .Button.eye::after {
+        width: 20px;
+        height: 20px;
+        background-size: 14px;
+    }
+}
+
+
+
+/*********************************
+* LIGHT MODE
+*********************************/
+
+.light-mode .Button.eye::before {
+    background-image: url(../../img/svgs/IMG_OLHO_LM.svg);
+}
+
+.light-mode .Button.eye::after {
+    background-image: url(../../img/svgs/IMG_OLHO_OFF_LM.svg);
+}
+
+.light-mode .Button.icon-button {
+    color: var(--lm_clrStrong);
+}
+
+.light-mode .Button.icon-button.add::before {
+    background-image: url(../../img/svgs/IMG_APORTE_LM.svg);
+}
+
+.light-mode .Button.icon-button.get::before {
+    background-image: url(../../img/svgs/IMG_RESGATE_LM.svg);
+}
+
+.light-mode .Button.sun.off::before {
+    display: block;
+}
+
+.light-mode .Button.sun.off::after {
+    display: none;
+}
+
+.light-mode .Button.moon::before {
+    display: none;
+}
+
+.light-mode .Button.moon::after {
+    display: block;
+}
+
+.light-mode .Button.menu::before {
+    background-image: url(../../img/svgs/ICO_MENU_LM.svg);
+}
+
+.light-mode .Button.dash::before {
+    background-image: url(../../img/svgs/IMG_HOME_LM.svg);
+}
+
+.light-mode .Button.close::before {
+    background-image: url(../../img/svgs/ICO_CLOSE_LM.svg);
+}
+
+.light-mode .Button.more-less::before {
+    background-image: url(../../img/svgs/IMG_ABRIR_LM.svg);
+}
+
+.light-mode .Button.more-less::after {
+    background-image: url(../../img/svgs/IMG_FECHAR_LM.svg);
+}
+
+.light-mode .Button.default:hover,
+.light-mode .Button.default.active {
+    text-decoration: none;
+    color: var(--lm_clrStrong);
+    border-color: var(--lm_clrStrong);
+}
