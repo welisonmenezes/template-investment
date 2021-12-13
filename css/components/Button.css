@@ -20,8 +20,9 @@
 .Button.default:hover,
 .Button.default.active {
     text-decoration: none;
-    color: var(--clrText);
-    border-color: var(--clrText);
+    color: var(--clrBG);
+    border-color: var(--clrPrimary);
+    background-color: var(--clrPrimary);
 }
 
 .Button.icon-button {

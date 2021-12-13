@@ -1,0 +1,13 @@
+.FormRow {
+    position: relative;
+}
+
+.FormRow.password .icon {
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 18px;
+}
+.FormRow.password.visible .icon {
+    background-image: url(../../img/svgs/eye-off.svg);
+}

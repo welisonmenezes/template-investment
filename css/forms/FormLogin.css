@@ -1,0 +1,68 @@
+.FormLogin {
+    max-width: 420px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.FormLogin .Logo {
+    margin: 0 auto 3rem auto;
+    display: block;
+    max-width: 280px;
+}
+
+.FormLogin h1 {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: .5rem;
+    padding-left: .5rem;
+}
+
+.FormLogin a {
+    color: var(--clrPrimary);
+}
+
+.FormLogin .text-center {
+    text-align: center;
+}
+
+.FormLogin .forgot {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    font-size: 16px;
+}
+
+.FormLogin .login {
+    margin-bottom: 3rem;
+}
+
+.FormLogin .register {
+    font-size: 24px;
+}
+
+.FormLogin .Button {
+    min-width: 160px;
+}
+
+
+@media (max-width: 768px) {
+    .FormLogin {
+        max-width: 80%;
+    }
+    
+    .FormLogin .Logo {
+        width: 160px;
+        margin-bottom: 2rem;
+    }
+
+    .FormLogin h1 {
+        font-size: 18px;
+    }
+
+    .FormLogin .login {
+        margin-bottom: 2rem;
+    }
+
+    .FormLogin .register {
+        font-size: 18px;
+    }
+}

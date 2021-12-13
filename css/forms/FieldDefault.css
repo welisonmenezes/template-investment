@@ -1,0 +1,68 @@
+.FieldDefault {
+    display: block;
+    width: 100%;
+    background-color: var(--clrText);
+    padding: 1rem;
+    border-radius: 12px;
+    border: solid 1px transparent;
+    outline: none !important;
+    box-shadow: none !important;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.FieldDefault::-webkit-input-placeholder {
+    color: var(--clrBG);
+}
+
+.FieldDefault:-ms-input-placeholder {
+    color: var(--clrBG);
+}
+
+.FieldDefault::placeholder {
+    color: var(--clrBG);
+}
+
+.FieldDefault:disabled,
+.FieldDefault:read-only {
+    background-color: var(--clrBGHover);
+    color: var(--clrText);
+}
+
+.FieldDefault.invalid {
+    background-color: var(--clrErrorBG);
+    color: var(--clrError);
+}
+
+.FieldDefault.invalid::-webkit-input-placeholder {
+    color: var(--clrError);
+}
+
+.FieldDefault.invalid:-ms-input-placeholder {
+    color: var(--clrError);
+}
+
+.FieldDefault.invalid::placeholder {
+    color: var(--clrError);
+}
+
+
+@media (max-width: 768px) {
+    .FieldDefault {
+        padding: .75rem 1rem;
+        font-size: 18px;
+    }
+}
+
+
+/*********************************
+* LIGHT MODE
+*********************************/
+
+.light-mode .FieldDefault {
+    border-color: var(--clrBorder);
+}
+
+.light-mode .FieldDefault.invalid {
+    border-color: var(--clrError);
+}

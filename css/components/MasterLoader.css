@@ -1,0 +1,75 @@
+.MasterLoader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    height: 100vh;
+    width: 100%;
+    background-color: var(--clrBG);
+    padding: 15px;
+}
+
+.MasterLoader > div {
+    min-height: calc(100vh - 30px);
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    border-radius: 13px;
+}
+
+.MasterLoader .simple-logo {
+    margin-top: 20vh;
+    width: 130px;
+    height: 130px;
+    background: url(../../img/svgs/logo_loading_branca.svg) no-repeat center;
+    animation-name: heartbeat; 
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+    animation-direction: alternate;
+}
+
+
+
+/*********************************
+* LIGHT MODE
+*********************************/
+.light-mode .MasterLoader {
+    background-color: var(--clrText);
+}
+
+.light-mode .MasterLoader .simple-logo {
+    background: url(../../img/svgs/logo_loading_azul.svg) no-repeat center;
+}
+
+
+
+
+@keyframes heartbeat
+{
+    0%
+    {
+        transform: scale( .90 );
+    }
+    20%
+    {
+        transform: scale( 1 );
+    }
+    40%
+    {
+        transform: scale( .90 );
+    }
+    60%
+    {
+        transform: scale( 1 );
+    }
+    80%
+    {
+        transform: scale( .90 );
+    }
+    100%
+    {
+        transform: scale( .90 );
+    }
+}

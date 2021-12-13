@@ -1,6 +1,14 @@
 .MainLayout {
     min-height: calc(100vh - 20px);
     background-color: var(--clrBG);
+    position: relative;
+    padding-bottom: 80px;
+}
+
+@media (max-width: 992px) {
+    .MainLayout {
+        padding-bottom: 0;
+    }
 }
 
 

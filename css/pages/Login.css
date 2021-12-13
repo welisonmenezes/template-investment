@@ -1,0 +1,18 @@
+.Diviser > li::after {
+    content: "";
+}
+
+.scrolled-window .MainHeader > div {
+    padding-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+    .MainHeader > div {
+        padding-bottom: 0px;
+        border-bottom: none !important;
+    }
+
+    .MainContent {
+        padding-top: 120px !important;
+    }
+}

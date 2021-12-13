@@ -4,7 +4,7 @@
 @import url('../vendors/OverlayScrollbars/OverlayScrollbars.min.css');
 
 @import url('./layout/MainAside.css');
-@import url('./layout/MainContennt.css');
+@import url('./layout/MainContent.css');
 @import url('./layout/MainFooter.css');
 @import url('./layout/MainHeader.css');
 @import url('./layout/MainLayout.css');
@@ -19,10 +19,13 @@
 @import url('./components/ContainerBorder.css');
 @import url('./components/DashboardTable.css');
 @import url('./components/Diviser.css');
+@import url('./components/FeedbackBox.css');
 @import url('./components/FinancialWidget.css');
 @import url('./components/LegalText.css');
 @import url('./components/ListCol.css');
+@import url('./components/Loader.css');
 @import url('./components/Logo.css');
+@import url('./components/MasterLoader.css');
 @import url('./components/Menu.css');
 @import url('./components/OverlayScrollbars.css');
 @import url('./components/PortfolioLabel.css');
@@ -38,6 +41,13 @@
 @import url('./components/UserBox.css');
 @import url('./components/Wallet.css');
 
+@import url('./forms/FieldDefault.css');
+@import url('./forms/FieldUnderlined.css');
+@import url('./forms/FormDefault.css');
+@import url('./forms/FormDefaultHeader.css');
+@import url('./forms/FormLogin.css');
+@import url('./forms/FormRow.css');
+
 :root {
     color-scheme: light dark;
     
@@ -51,6 +61,8 @@
     --clrText: #ffffff;
     --clrPortfolioLabel: #C2BECA;
     --clrBorder: #6D6A79;
+    --clrError: #C35757;
+    --clrErrorBG: #FFADAD;
 
     --clrOA: #2D2487;
     --clrADV: #362A4A;
@@ -71,6 +83,7 @@
     --lm_clrSecondary: #02B9A3;
     --lm_clrDown: #FF6E6E;
     --lm_clrBorder: #E3E1E7;
+    --lm_clrError: #e80e0e;
 }
 
 /***
@@ -182,6 +195,22 @@ button {
 }
 
 
+.error-message {
+    font-size: 12px;
+    color: var(--clrError);
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+}
+
+.icon.eye {
+    background: url(../img/svgs/eye-on.svg) no-repeat center;
+    background-size: 18px;
+}
+
 
 /*********************************
 * LIGHT MODE
@@ -189,4 +218,8 @@ button {
 
 body.light-mode {
     color: var(--lm_clrStrong);
+}
+
+.light-mode .error-message {
+    color: var(--lm_clrError);
 }

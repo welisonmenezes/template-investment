@@ -1,0 +1,43 @@
+.FormDefault {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.FormDefault .FormDefaultHeader {
+    margin-bottom: 2rem;
+}
+
+.FormDefault h2 {
+    font-size: 18px;
+    letter-spacing: -0.5px;
+    font-weight: 500;
+}
+
+.FormDefault .FormRow {
+    margin-bottom: 1rem;
+}
+
+.FormDefault .FormRow.action {
+    padding-top: .5rem;
+}
+
+.FormDefault .FormRow .icon.eye {
+    right: 1rem;
+    top: 21px;
+}
+
+.FormDefault p {
+    font-size: 16px;
+}
+
+.FormDefault a {
+    font-size: 16px;
+    color: var(--clrPrimary);
+}
+
+
+@media (max-width: 768px) {
+    .FormDefault .FormRow .icon.eye {
+        top: 17px;
+    }
+}

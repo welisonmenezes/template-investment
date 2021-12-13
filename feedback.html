@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="dark light">
+    <meta name="description" content="">
+    <title>Transfero Prime</title>
+    <link href="img/favicon.png" rel="apple-touch-icon" sizes="144x144">
+    <link href="img/favicon.png" rel="apple-touch-icon" sizes="120x120">
+    <link href="img/favicon.png" rel="apple-touch-icon" sizes="76x76">
+    <link href="img/favicon.png" rel="shortcut icon">
+    <link href="img/favicon.png" rel="icon">
+    <link rel="stylesheet" href="css/Styles.css">
+    <link rel="stylesheet" href="css/pages/Login.css">
+</head>
+<body>
+    <div id="app">
+        <div class="MainLayout">
+            <div class="ContainerBorder top"></div>
+            <div class="ContainerBorder bottom"></div>
+
+            <header class="MainHeader">
+                <div>
+                    <div class="container">
+                        <div>
+                            <a href="#" class="Logo"></a>
+                        </div>
+                        <div class="col">
+                            <ul class="Diviser">
+                                <li class="hide-992">
+                                    <ul class="Diviser small">
+                                        <li>
+                                            <button type="button" class="Button moon" onclick="SetDarkOrLightMode(true)"></button>
+                                        </li>
+                                        <li>
+                                            <button type="button" class="Button sun off" onclick="SetDarkOrLightMode(false)"></button>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <button type="button" class="Button menu" onclick="OpenMainMenu()"></button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <aside class="MainMenu">
+                <div>
+                    <div class="menu-header">
+                        <button type="button" class="Button close" onclick="CloseMainMenu()"></button>
+                        <ul class="Diviser small">
+                            <li>
+                                <button type="button" class="Button moon" onclick="SetDarkOrLightMode(true)"></button>
+                            </li>
+                            <li>
+                                <button type="button" class="Button sun off" onclick="SetDarkOrLightMode(false)"></button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="menu-body">
+                        <ul class="Menu">
+                            <li>
+                                <a href="#">
+                                    <span>FAQ</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>Suporte</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </aside>
+            <div class="MainMenuBG" onclick="CloseMainMenu()"></div>
+
+            <main class="MainContent">
+                <div>
+                    <div class="FeedbackBox">
+                        <img src="img/svgs/ICO_CHECK.svg" alt="success">
+                        
+                        <!-- Error Option -->
+                        <!-- <img src="img/svgs/ICO_ERROR.svg" alt="error"> -->
+
+                        <h1>Seu cadastro foi validado com sucesso.</h1>
+                        <div>
+                            <a href="#" class="Button default">BEM-VINDO À PLATAFORMA TRANSFERO</a>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <footer class="MainFooter">
+                <div>
+                    <p>Powered by Transfero <span>Asset Management Ltd | Bahamas</span></p>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script src="js/App.js"></script>
+</body>
+</html>

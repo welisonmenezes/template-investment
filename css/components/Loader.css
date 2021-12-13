@@ -1,0 +1,14 @@
+.Loader {
+    width: 50px;
+    height: 50px;
+    background: url(../../img/svgs/loader-branco.svg) no-repeat center;
+    background-size: 50px;
+}
+
+
+/*********************************
+* LIGHT MODE
+*********************************/
+.light-mode .Loader {
+    background: url(../../img/svgs/loader-cinza.svg) no-repeat center;
+}

@@ -4,6 +4,10 @@
     font-size: 18px;
     font-weight: 500;
     color: var(--clrDisabledText);
+    position: absolute;
+    width: 100%;
+    bottom: 15px;
+    left: 0;
 }
 
 .MainFooter .Diviser {

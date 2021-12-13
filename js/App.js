@@ -38,6 +38,7 @@ LoaderScripts("js/components/Charts.js", true);
 LoaderScripts("js/components/Collapse.js", true);
 LoaderScripts("js/components/CollapseChart.js", true);
 LoaderScripts("js/components/OverlayScrollbars.js", true);
+LoaderScripts("js/components/FormRow.js", true);
 LoaderScripts("js/components/SideContent.js", function() {
     
     // from js/components/Charts.js

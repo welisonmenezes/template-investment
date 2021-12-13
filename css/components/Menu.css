@@ -46,6 +46,10 @@
     border-top-color: var(--lm_clrBorder);
 }
 
+.light-mode .Menu a {
+    color: var(--clrStrong);
+}
+
 .light-mode .Menu li {
     border-bottom-color: var(--lm_clrBorder);
 }

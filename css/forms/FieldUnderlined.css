@@ -1,0 +1,57 @@
+.FieldUnderlined {
+    background-color: transparent;
+    outline: none;
+    box-shadow: none;
+    border: none;
+    border-bottom: solid 1px var(--clrBGHover);
+    color: var(--clrText);
+    padding: 1rem .5rem 0px .5rem;
+    display: block;
+    width: 100%;
+}
+
+.FieldUnderlined:focus {
+    border-bottom-color: var(--clrText);
+}
+
+.FieldUnderlined::-webkit-input-placeholder {
+    color: var(--clrDisabledText);
+}
+
+.FieldUnderlined:-ms-input-placeholder {
+    color: var(--clrDisabledText);
+}
+
+.FieldUnderlined::placeholder {
+    color: var(--clrDisabledText);
+}
+
+.FieldUnderlined.invalid {
+    border-bottom-color: var(--clrError);
+}
+
+
+/*********************************
+* LIGHT MODE
+*********************************/
+
+.light-mode .FieldUnderlined {
+    border-bottom-color: var(--lm_clrText);
+    color: var(--lm_clrStrong);
+}
+
+.light-mode .FieldUnderlined::-webkit-input-placeholder {
+    color: var(--lm_clrText);
+}
+
+.light-mode .FieldUnderlined:-ms-input-placeholder {
+    color: var(--lm_clrText);
+}
+
+.light-mode .FieldUnderlined::placeholder {
+    color: var(--lm_clrText);
+}
+
+.light-mode .FieldUnderlined.invalid {
+    border-bottom-color: var(--lm_clrError);
+}
