@@ -1,0 +1,200 @@
+
+
+
+.ResponsiveTHeader,
+.ResponsiveTHeader > .col-data,
+.ResponsiveTRow,
+.ResponsiveTRow > .col-data {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-shrink: 0;
+}
+
+.ResponsiveTRow > .col-data label {
+    display: none;
+    font-size: 12px;
+    color: var(--clrDisabledText);
+    margin-bottom: 5px;
+}
+
+.ResponsiveTHeader .col,
+.ResponsiveTRow .col {
+    width: 100%;
+    word-wrap: break-word;
+    position: relative;
+}
+
+.ResponsiveTHeader > .col-data,
+.ResponsiveTRow > .col-data {
+    width: 95%;
+}
+
+.ResponsiveTHeader .col,
+.ResponsiveTRow .col {
+    padding-right: 1rem;
+}
+
+.ResponsiveTRow .col input {
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    outline: none !important;
+    box-shadow: none !important;
+    color: var(--clrPortfolioLabel);
+}
+
+.ResponsiveTHeader {
+    font-size: 12px;
+    color: var(--clrDisabledText);
+}
+
+.ResponsiveTRow {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: solid 1px var(--clrBGHover);
+    line-height: 18px;
+}
+
+.ResponsiveTRow.editing {
+    background-color: #100F34;
+}
+
+.ResponsiveTRow.loading {
+    background-color: #100F34;
+    justify-content: flex-end;
+    text-align: right;
+    padding: 1rem;
+}
+
+.ResponsiveTRow:last-child {
+    border-bottom: none;
+}
+
+.ResponsiveTable .col-1 {
+    padding-left: 1rem;
+}
+
+.ResponsiveTable .col-1,
+.ResponsiveTable .col-2 {
+    max-width: 30%;
+}
+
+.ResponsiveTable .col-3,
+.ResponsiveTable .col-4 {
+    max-width: 7.5%;
+}
+
+.ResponsiveTable .col-5,
+.ResponsiveTable .col-6 {
+     max-width: 12.5%;
+}
+
+.ResponsiveTable .col-6 {
+    padding-right: 30px;
+}
+
+.ResponsiveTable {
+    font-size: 18px;
+    padding-top: 2rem;
+    font-weight: 500;
+}
+
+.ResponsiveTable .col-action {
+    text-align: right;
+    width: 100%;
+    padding-right: 1rem;
+}
+
+.ResponsiveTable .col-action button.edit {
+    background: transparent url(../../img/svgs/lapis.svg) no-repeat center;
+    background-size: 18px;
+    width: 20px;
+    height: 20px;
+    position: relative;
+}
+
+.ResponsiveTable .col-action button.save {
+    cursor: pointer;
+    color: var(--clrPortfolioLabel);
+    font-size: 12px;
+    font-weight: 500;
+}
+
+
+
+
+@media (max-width: 992px) {
+    .ResponsiveTHeader {
+        display: none;
+    }
+
+    .ResponsiveTRow {
+        padding-left: 1rem;
+    }
+
+    .ResponsiveTable .col-1 {
+        padding-left: 0;
+    }
+
+    .ResponsiveTRow > .col-data {
+        display: block;
+    }
+
+    .ResponsiveTRow > .col-data label {
+        display: block;
+    }
+
+    .ResponsiveTRow > .col-data .col {
+        margin-bottom: 1rem;
+        max-width: none;
+        padding-right: 0;
+    }
+
+    .ResponsiveTHeader > .col-data,
+    .ResponsiveTRow > .col-data {
+        width: 85%;
+    }
+
+    .ResponsiveTable {
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+}
+
+
+
+
+
+
+
+
+/*********************************
+* LIGHT MODE
+*********************************/
+
+.light-mode .ResponsiveTHeader {
+    color: var(--lm_clrText);
+}
+
+.light-mode .ResponsiveTRow {
+    color: var(--lm_clrStrong);
+    border-bottom-color: var(--lm_clrBorder);
+}
+
+.light-mode .ResponsiveTRow > .col-data label {
+    color: var(--lm_clrText);
+}
+
+.light-mode .ResponsiveTable .col-action button.edit {
+    background: transparent url(../../img/svgs/lapis-light.svg) no-repeat center;
+}
+
+.light-mode .ResponsiveTable .col-action button.save {
+    color: var(--clrBorder);
+}
+
+.light-mode .ResponsiveTRow.editing,
+.light-mode .ResponsiveTRow.loading {
+    background-color: #FAFAFC;
+}

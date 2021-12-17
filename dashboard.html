@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="dark light">
+    <meta name="description" content="">
+    <title>Transfero Prime</title>
+    <link href="img/favicon.png" rel="apple-touch-icon" sizes="144x144">
+    <link href="img/favicon.png" rel="apple-touch-icon" sizes="120x120">
+    <link href="img/favicon.png" rel="apple-touch-icon" sizes="76x76">
+    <link href="img/favicon.png" rel="shortcut icon">
+    <link href="img/favicon.png" rel="icon">
+    <link rel="stylesheet" href="css/Styles.css">
+    <link rel="stylesheet" href="css/pages/Dashboard.css">
+</head>
+<body>
+    <div id="app">
+        <div class="MainLayout">
+            <div class="ContainerBorder top"></div>
+            <div class="ContainerBorder bottom"></div>
+
+            <header class="MainHeader">
+                <div>
+                    <div class="container">
+                        <div class="col col-1">
+                            <a href="#" class="Logo"></a>
+                        </div>
+                        <div class="col col-3">
+                            <ul class="Diviser">
+                                <li class="hide-992">
+                                    <ul class="Diviser small">
+                                        <li>
+                                            <button type="button" class="Button moon" onclick="SetDarkOrLightMode(true)"></button>
+                                        </li>
+                                        <li>
+                                            <button type="button" class="Button sun off" onclick="SetDarkOrLightMode(false)"></button>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <button type="button" class="Button menu" onclick="OpenMainMenu()"></button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <aside class="MainMenu">
+                <div>
+                    <div class="menu-header">
+                        <button type="button" class="Button close" onclick="CloseMainMenu()"></button>
+                        <ul class="Diviser small">
+                            <li>
+                                <button type="button" class="Button moon" onclick="SetDarkOrLightMode(true)"></button>
+                            </li>
+                            <li>
+                                <button type="button" class="Button sun off" onclick="SetDarkOrLightMode(false)"></button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="menu-body">
+                        <div class="UserBox">
+                            <span class="name">Welison Menezes</span>
+                            <a href="#">Meus Dados</a>
+                        </div>
+                        <ul class="Menu">
+                            <li>
+                                <a href="#">
+                                    <span>Alterar Senha</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>Autenticação de 2 Fatores</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>FAQ</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>Suporte</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>Logout</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </aside>
+            <div class="MainMenuBG" onclick="CloseMainMenu()"></div>
+
+            <aside class="MainAside">
+                <div>
+                    <div class="container">
+                        <div class="col-1">
+                            <h1>Administração de usuários</h1>
+                        </div>
+                        <div class="col-2 col-search">
+                            <form class="SearchForm">
+                                <label>Buscar:</label>
+                                <input type="text" class="">
+                                <button></button>
+                            </form>
+                            <div class="Pagination hide-576">
+                                <div>1 de 89</div>
+                                <button class="prev disabled"></button>
+                                <button class="next"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <main class="MainContent">
+                <div>
+                    <div class="Pagination show-576">
+                        <div>1 de 89</div>
+                        <button class="prev disabled"></button>
+                        <button class="next"></button>
+                    </div>
+                    <div class="ResponsiveTable">
+                        <div class="ResponsiveTHeader">
+                            <div class="col-data">
+                                <div class="col col-1">Nome</div>
+                                <div class="col col-2">Email</div>
+                                <div class="col col-3">2FA</div>
+                                <div class="col col-4">Email Ok</div>
+                                <div class="col col-5">TA</div>
+                                <div class="col col-6">Perfil</div>
+                            </div>
+                            <div class="col-action">&nbsp;</div>
+                        </div>
+                        <div class="ResponsiveTRow">
+                            <div class="col-data">
+                                <div class="col col-1">
+                                    <label>Nome</label>
+                                    Welison Menezes
+                                </div>
+                                <div class="col col-2">
+                                    <label>Email</label>
+                                    welison@email.com
+                                </div>
+                                <div class="col col-3">
+                                    <label>2FA</label>
+                                    Sim
+                                </div>
+                                <div class="col col-4">
+                                    <label>Email Ok</label>
+                                    Sim
+                                </div>
+                                <div class="col col-5">
+                                    <label>TA</label>
+                                    90009
+                                </div>
+                                <div class="col col-6">
+                                    <label>Perfil</label>
+                                    Admin
+                                </div>
+                            </div>
+                            <div class="col-action">
+                                <button class="edit"></button>
+                            </div>
+                        </div>
+                        <div class="ResponsiveTRow">
+                            <div class="col-data">
+                                <div class="col col-1">
+                                    <label>Nome</label>
+                                    Welison Menezes
+                                </div>
+                                <div class="col col-2">
+                                    <label>Email</label>
+                                    welison@email.com
+                                </div>
+                                <div class="col col-3">
+                                    <label>2FA</label>
+                                    Sim
+                                </div>
+                                <div class="col col-4">
+                                    <label>Email Ok</label>
+                                    Sim
+                                </div>
+                                <div class="col col-5">
+                                    <label>TA</label>
+                                    90009
+                                </div>
+                                <div class="col col-6">
+                                    <label>Perfil</label>
+                                    Admin
+                                </div>
+                            </div>
+                            <div class="col-action">
+                                <button class="edit"></button>
+                            </div>
+                        </div>
+                        <div class="ResponsiveTRow">
+                            <div class="col-data">
+                                <div class="col col-1">
+                                    <label>Nome</label>
+                                    Welison Menezes
+                                </div>
+                                <div class="col col-2">
+                                    <label>Email</label>
+                                    welison@email.com
+                                </div>
+                                <div class="col col-3">
+                                    <label>2FA</label>
+                                    Sim
+                                </div>
+                                <div class="col col-4">
+                                    <label>Email Ok</label>
+                                    Sim
+                                </div>
+                                <div class="col col-5">
+                                    <label>TA</label>
+                                    90009
+                                </div>
+                                <div class="col col-6">
+                                    <label>Perfil</label>
+                                    Admin
+                                </div>
+                            </div>
+                            <div class="col-action">
+                                <button class="edit"></button>
+                            </div>
+                        </div>
+                        <div class="ResponsiveTRow">
+                            <div class="col-data">
+                                <div class="col col-1">
+                                    <label>Nome</label>
+                                    Welison Menezes
+                                </div>
+                                <div class="col col-2">
+                                    <label>Email</label>
+                                    welison@email.com
+                                </div>
+                                <div class="col col-3">
+                                    <label>2FA</label>
+                                    Sim
+                                </div>
+                                <div class="col col-4">
+                                    <label>Email Ok</label>
+                                    Sim
+                                </div>
+                                <div class="col col-5">
+                                    <label>TA</label>
+                                    90009
+                                </div>
+                                <div class="col col-6">
+                                    <label>Perfil</label>
+                                    Admin
+                                </div>
+                            </div>
+                            <div class="col-action">
+                                <button class="edit"></button>
+                            </div>
+                        </div>
+
+                        <!-- LINHA MODO EDIÇÃO -->
+                        <div class="ResponsiveTRow editing">
+                            <div class="col-data">
+                                <div class="col col-1">
+                                    <label>Nome</label>
+                                    <input type="text" value="Welison Menezes">
+                                </div>
+                                <div class="col col-2">
+                                    <label>Email</label>
+                                    <input type="email" value="welison@email.com">
+                                </div>
+                                <div class="col col-3">
+                                    <label>2FA</label>
+                                    <input type="text" value="Sim">
+                                </div>
+                                <div class="col col-4">
+                                    <label>Email Ok</label>
+                                    <input type="text" value="Sim">
+                                </div>
+                                <div class="col col-5">
+                                    <label>TA</label>
+                                    <input type="text" value="90009">
+                                </div>
+                                <div class="col col-6">
+                                    <label>Perfil</label>
+                                    <input type="text" value="Admin">
+                                </div>
+                            </div>
+                            <div class="col-action">
+                                <button class="save">Salvar</button>
+                            </div>
+                        </div>
+                        <!-- LINHA MODO EDIÇÃO FIM -->
+
+                        <!-- LINHA MODO LOADING -->
+                        <div class="ResponsiveTRow loading">
+                            <div class="col-loading">
+                                <div class="Loader"></div>
+                            </div>
+                        </div>
+                        <!-- LINHA MODO LOADING FIM -->
+
+                        <div class="ResponsiveTRow">
+                            <div class="col-data">
+                                <div class="col col-1">
+                                    <label>Nome</label>
+                                    Welison Menezes
+                                </div>
+                                <div class="col col-2">
+                                    <label>Email</label>
+                                    welison@email.com
+                                </div>
+                                <div class="col col-3">
+                                    <label>2FA</label>
+                                    Sim
+                                </div>
+                                <div class="col col-4">
+                                    <label>Email Ok</label>
+                                    Sim
+                                </div>
+                                <div class="col col-5">
+                                    <label>TA</label>
+                                    90009
+                                </div>
+                                <div class="col col-6">
+                                    <label>Perfil</label>
+                                    Admin
+                                </div>
+                            </div>
+                            <div class="col-action">
+                                <button class="edit"></button>
+                            </div>
+                        </div>
+                        <div class="ResponsiveTRow">
+                            <div class="col-data">
+                                <div class="col col-1">
+                                    <label>Nome</label>
+                                    Welison Menezes
+                                </div>
+                                <div class="col col-2">
+                                    <label>Email</label>
+                                    welison@email.com
+                                </div>
+                                <div class="col col-3">
+                                    <label>2FA</label>
+                                    Sim
+                                </div>
+                                <div class="col col-4">
+                                    <label>Email Ok</label>
+                                    Sim
+                                </div>
+                                <div class="col col-5">
+                                    <label>TA</label>
+                                    90009
+                                </div>
+                                <div class="col col-6">
+                                    <label>Perfil</label>
+                                    Admin
+                                </div>
+                            </div>
+                            <div class="col-action">
+                                <button class="edit"></button>
+                            </div>
+                        </div>
+                        <div class="ResponsiveTRow">
+                            <div class="col-data">
+                                <div class="col col-1">
+                                    <label>Nome</label>
+                                    Welison Menezes
+                                </div>
+                                <div class="col col-2">
+                                    <label>Email</label>
+                                    welison@email.com
+                                </div>
+                                <div class="col col-3">
+                                    <label>2FA</label>
+                                    Sim
+                                </div>
+                                <div class="col col-4">
+                                    <label>Email Ok</label>
+                                    Sim
+                                </div>
+                                <div class="col col-5">
+                                    <label>TA</label>
+                                    90009
+                                </div>
+                                <div class="col col-6">
+                                    <label>Perfil</label>
+                                    Admin
+                                </div>
+                            </div>
+                            <div class="col-action">
+                                <button class="edit"></button>
+                            </div>
+                        </div>
+                        <div class="ResponsiveTRow">
+                            <div class="col-data">
+                                <div class="col col-1">
+                                    <label>Nome</label>
+                                    Welison Menezes
+                                </div>
+                                <div class="col col-2">
+                                    <label>Email</label>
+                                    welison@email.com
+                                </div>
+                                <div class="col col-3">
+                                    <label>2FA</label>
+                                    Sim
+                                </div>
+                                <div class="col col-4">
+                                    <label>Email Ok</label>
+                                    Sim
+                                </div>
+                                <div class="col col-5">
+                                    <label>TA</label>
+                                    90009
+                                </div>
+                                <div class="col col-6">
+                                    <label>Perfil</label>
+                                    Admin
+                                </div>
+                            </div>
+                            <div class="col-action">
+                                <button class="edit"></button>
+                            </div>
+                        </div>
+                        <div class="ResponsiveTRow">
+                            <div class="col-data">
+                                <div class="col col-1">
+                                    <label>Nome</label>
+                                    Welison Menezes
+                                </div>
+                                <div class="col col-2">
+                                    <label>Email</label>
+                                    welison@email.com
+                                </div>
+                                <div class="col col-3">
+                                    <label>2FA</label>
+                                    Sim
+                                </div>
+                                <div class="col col-4">
+                                    <label>Email Ok</label>
+                                    Sim
+                                </div>
+                                <div class="col col-5">
+                                    <label>TA</label>
+                                    90009
+                                </div>
+                                <div class="col col-6">
+                                    <label>Perfil</label>
+                                    Admin
+                                </div>
+                            </div>
+                            <div class="col-action">
+                                <button class="edit"></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Pagination">
+                        <div>1 de 89</div>
+                        <button class="prev disabled"></button>
+                        <button class="next"></button>
+                    </div>
+                </div>
+            </main>
+
+            <footer class="MainFooter">
+                <div>
+                    <p>Powered by Transfero <span>Asset Management Ltd | Bahamas</span></p>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script src="js/App.js"></script>
+</body>
+</html>

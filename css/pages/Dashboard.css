@@ -1,0 +1,54 @@
+.MainAside h1 {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.MainAside .col-search .SearchForm {
+    margin-right: 1rem;
+}
+
+.MainContent .Pagination {
+    padding-top: 2rem;
+}
+
+.show-576 {
+    display: none !important;
+}
+
+@media (max-width: 992px) {
+    .MainHeader > div {
+        padding-bottom: 120px;
+    }
+
+    .MainAside h1 {
+        font-size: 22px;
+        white-space: nowrap;
+    }
+
+    .MainAside > div > .container {
+        display: block;
+    }
+
+    .MainAside .col-search {
+        justify-content: flex-start !important;
+        padding-top: 2rem;
+    }
+
+    .ResponsiveTable {
+        padding-top: 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .MainAside h1 {
+        font-size: 18px;
+    }
+
+    .show-576 {
+        display: flex !important;
+    }
+
+    .hide-576 {
+        display: none !important;
+    }
+}

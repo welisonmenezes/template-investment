@@ -28,9 +28,11 @@
 @import url('./components/MasterLoader.css');
 @import url('./components/Menu.css');
 @import url('./components/OverlayScrollbars.css');
+@import url('./components/Pagination.css');
 @import url('./components/PortfolioLabel.css');
 @import url('./components/Quotation.css');
 @import url('./components/QuotationInfo.css');
+@import url('./components/ResponsiveTable.css');
 @import url('./components/RiskIndicator.css');
 @import url('./components/SideContent.css');
 @import url('./components/SideMenu.css');
@@ -47,6 +49,7 @@
 @import url('./forms/FormDefaultHeader.css');
 @import url('./forms/FormLogin.css');
 @import url('./forms/FormRow.css');
+@import url('./forms/SearchForm.css');
 
 :root {
     color-scheme: light dark;

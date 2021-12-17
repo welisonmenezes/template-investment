@@ -1,0 +1,56 @@
+.Pagination {
+    font-weight: 500;
+    font-size: 18px;
+    color: var(--clrText);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    text-align: right;
+}
+
+.Pagination > div {
+    margin-right: 1rem;
+}
+
+.Pagination button {
+    cursor: pointer;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 8px;
+    width: 20px;
+    height: 20px;
+}
+
+.Pagination button.prev {
+    background-image: url(../../img/svgs/arrow-left-gray.svg);
+    margin-right: 1rem;
+}
+
+.Pagination button.next {
+    background-image: url(../../img/svgs/arrow-right-gray.svg);
+}
+
+.Pagination button.disabled {
+    opacity: .5;
+    cursor: not-allowed;
+}
+
+
+
+
+/*********************************
+* LIGHT MODE
+*********************************/
+
+.light-mode .Pagination {
+    color: var(--clrBG);
+}
+
+.light-mode .Pagination button.prev {
+    background-image: url(../../img/svgs/arrow-left-gray-light.svg);
+}
+
+.light-mode .Pagination button.next {
+    background-image: url(../../img/svgs/arrow-right-gray-light.svg);
+}
